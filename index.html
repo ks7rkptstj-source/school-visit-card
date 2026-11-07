@@ -28,20 +28,20 @@ button,input,select,textarea{font:inherit}
 .saved-row:last-child{border-bottom:0}
 .saved-row strong{flex:1;min-width:140px}
 
-/* إجبار الصفحة على ملء ورقة A4 وتوزيع المحتوى بدقة بدون صفحات إضافية */
+/* تثبيت مقاس ورقة A4 بالمليمتر بدقة 210 × 297 مم */
 .page{
-  width:210mm;
-  height:297mm;
-  max-height:297mm;
-  margin:0 auto;
-  background:white;
-  padding:2mm 4mm;
-  box-shadow:0 2px 16px #00000012;
-  box-sizing:border-box;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  overflow:hidden;
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  margin: 0 auto;
+  background: white;
+  padding: 2mm 4mm;
+  box-shadow: 0 2px 16px #00000012;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .header{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:2px 4px;margin-bottom:2px;border:1px solid #bae6fd;border-radius:4px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
@@ -115,27 +115,27 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .notes textarea,.objective textarea{font-size:11px}
 }
 
-/* إعدادات الطباعة للالتزام بصفحة واحدة A4 بالكامل وبدون أي فراغات */
+/* إعدادات الطباعة الدقيقة على مقاس 210 × 297 مم */
 @page{
-  size:A4 portrait;
-  margin:0mm;
+  size: 210mm 297mm;
+  margin: 0mm;
 }
 @media print{
  html,body{width:210mm!important;height:297mm!important;margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;overflow:hidden!important}
  .toolbar,.saved-panel,.small-help{display:none!important}
  .page{
-   width:210mm!important;
-   height:297mm!important;
-   max-height:297mm!important;
-   margin:0!important;
-   padding:1.5mm 3mm!important;
-   box-shadow:none!important;
-   border-radius:0!important;
-   overflow:hidden!important;
-   box-sizing:border-box!important;
-   display:flex!important;
-   flex-direction:column!important;
-   justify-content:space-between!important;
+   width: 210mm !important;
+   height: 297mm !important;
+   max-height: 297mm !important;
+   margin: 0 !important;
+   padding: 1.5mm 3mm !important;
+   box-shadow: none !important;
+   border-radius: 0 !important;
+   overflow: hidden !important;
+   box-sizing: border-box !important;
+   display: flex !important;
+   flex-direction: column !important;
+   justify-content: space-between !important;
  }
  .header{padding:1.5px 3px;margin-bottom:1px;gap:2px}
  .header-title .bismillah{font-size:6.5pt;margin-bottom:0}
