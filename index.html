@@ -28,14 +28,14 @@ button,input,select,textarea{font:inherit}
 .saved-row:last-child{border-bottom:0}
 .saved-row strong{flex:1;min-width:140px}
 
-/* تثبيت مقاس ورقة A4 بدقة 210 × 297 مم */
+/* استغلال كامل مساحة ورقة A4 وتقليل الهوامش الخارجية للحد الأدنى */
 .page{
   width: 210mm;
   height: 297mm;
   max-height: 297mm;
   margin: 0 auto;
   background: white;
-  padding: 1mm 2.5mm;
+  padding: 2mm 3mm;
   box-shadow: 0 2px 16px #00000012;
   box-sizing: border-box;
   display: flex;
@@ -44,49 +44,48 @@ button,input,select,textarea{font:inherit}
   overflow: hidden;
 }
 
-.header{display:flex;justify-content:space-between;align-items:center;gap:3px;padding:1px 3px;margin-bottom:1px;border:1px solid #bae6fd;border-radius:3px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
-.school-info{font-size:5.2pt;font-weight:bold;line-height:1.05;min-width:27%}
+.header{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:2px 4px;margin-bottom:1.5px;border:1px solid #bae6fd;border-radius:3px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
+.school-info{font-size:5.5pt;font-weight:bold;line-height:1.1;min-width:27%}
 .school-info.left{text-align:left}
 .header-title{text-align:center;flex:1}
-.header-title .bismillah{font-size:6pt;font-weight:bold;color:#0369a1;margin-bottom:0}
-.header-title h1{font-size:9.5pt;color:#0369a1;margin:0 0 0}
-.header-title p{font-size:5.2pt;color:#0f766e;font-weight:bold;margin:0}
-.date-input{max-width:85px}
+.header-title .bismillah{font-size:6.5pt;font-weight:bold;color:#0369a1;margin-bottom:0}
+.header-title h1{font-size:10pt;color:#0369a1;margin:0 0 0}
+.header-title p{font-size:5.5pt;color:#0f766e;font-weight:bold;margin:0}
+.date-input{max-width:90px}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
-.meta{margin-bottom:1px}
-.meta th,.meta td{border:1px solid var(--border);padding:0.5px 1.5px;font-size:5.5pt;text-align:right;overflow-wrap:anywhere}
+.meta{margin-bottom:1.5px}
+.meta th,.meta td{border:1px solid var(--border);padding:1px 2px;font-size:5.8pt;text-align:right;overflow-wrap:anywhere}
 .meta th{background:var(--light-blue);color:#0369a1;width:12%;font-weight:bold}
 .meta td{width:21%}
-input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:2px;padding:0.5px 1.5px;background:white;color:var(--text);font-size:5.5pt}
-.objective{border:1px solid var(--border);background:#fafafa;border-radius:2px;padding:1px 2px;margin-bottom:1px}
-.objective label,.note label{display:block;font-size:5.5pt;color:#0369a1;font-weight:bold;margin-bottom:0}
-.objective textarea{height:12px;resize:vertical}
+input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:2px;padding:1px 2px;background:white;color:var(--text);font-size:5.8pt}
+.objective{border:1px solid var(--border);background:#fafafa;border-radius:2px;padding:1px 2px;margin-bottom:1.5px}
+.objective label,.note label{display:block;font-size:5.8pt;color:#0369a1;font-weight:bold;margin-bottom:0}
+.objective textarea{height:13px;resize:vertical}
 
-/* صفوف الجدول ضيقة وخطوط علامات الصح أصغر حجماً وأنيقة */
-.eval{margin-bottom:1px}
-.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:0.8px 0.5px;font-size:5.2pt}
-.eval td{border:1px solid var(--border);padding:0.1px;font-size:5.2pt;text-align:center;height:17.5px}
+/* توزيع جدول التقييم بامتوازٍ تام ومساحة واسعة */
+.eval{margin-bottom:1.5px}
+.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:1px;font-size:5.5pt}
+.eval td{border:1px solid var(--border);padding:0.2px;font-size:5.5pt;text-align:center;height:18px}
 .eval td.item{text-align:right;font-weight:600;line-height:1}
 .eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:35%}
 .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8.5%}
 .eval th:nth-child(7){width:27%}
-.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:15px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:2px;font-size:8pt;line-height:1;text-align:center}
+.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:16px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:2px;font-size:8.5pt;line-height:1;text-align:center}
 .rate.chosen{background:#dcfce7;color:#166534;border:1.5px solid #15803d;box-shadow:inset 0 0 0 1px #15803d}
 .rate.zero{background:#fee2e2;color:#991b1b;border:1.5px solid #b91c1c;box-shadow:inset 0 0 0 1px #b91c1c}
-.remarks{font-size:5.2pt;padding:0.1px;height:15px}
+.remarks{font-size:5.5pt;padding:0.2px;height:16px}
 
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;margin-bottom:1px}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:1.5px}
 .note{border:1px solid var(--border);border-radius:2px;padding:1px 2px}
-.note textarea{height:14px;resize:vertical;border:0;padding:0.5px;font-size:5.5pt}
+.note textarea{height:15px;resize:vertical;border:0;padding:0.5px;font-size:5.8pt}
 
-/* رفع التوقيعات للأعلى قليلاً لتوفير المساحة واحتواء الصفحة تماماً */
-.signatures{margin-top:0.5px}
-.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:0.8px;vertical-align:top}
-.sig-title{font-size:5.5pt;color:#0369a1;font-weight:bold;margin-bottom:0}
-.sig-select{width:100%;font-size:5.5pt;border:1px solid var(--border);border-radius:2px;padding:0.5px;background:white}
-.sig-name{font-size:5.8pt;font-weight:bold;padding:0.2px}
-.sig-space{font-size:4.5pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:0.5px;padding-top:0.2px}
-.footer{text-align:center;border-top:1.2px solid #16a34a;margin-top:0.5px;padding-top:0.2px;font-size:4.8pt;font-weight:bold;color:#475569}
+.signatures{margin-top:1px}
+.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:1px;vertical-align:top}
+.sig-title{font-size:5.8pt;color:#0369a1;font-weight:bold;margin-bottom:0}
+.sig-select{width:100%;font-size:5.8pt;border:1px solid var(--border);border-radius:2px;padding:0.5px;background:white}
+.sig-name{font-size:6.2pt;font-weight:bold;padding:0.2px}
+.sig-space{font-size:4.8pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:0.5px;padding-top:0.2px}
+.footer{text-align:center;border-top:1.2px solid #16a34a;margin-top:0.5px;padding-top:0.2px;font-size:5.2pt;font-weight:bold;color:#475569}
 .small-help{max-width:210mm;margin:4px auto;color:#475569;font-size:10px;line-height:1.4}
 
 @media(max-width:700px){
@@ -116,7 +115,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .notes textarea,.objective textarea{font-size:11px}
 }
 
-/* إعدادات الطباعة الدقيقة على مقاس 210 × 297 مم لضمان صفحة واحدة فقط */
+/* إعدادات الطباعة الدقيقة على مقاس 210 × 297 مم لضمان صفحة واحدة فقط وبدون هوامش مهدورة */
 @page{
   size: 210mm 297mm;
   margin: 0mm;
@@ -129,7 +128,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
    height: 297mm !important;
    max-height: 297mm !important;
    margin: 0 !important;
-   padding: 1mm 2.5mm !important;
+   padding: 1.5mm 3mm !important;
    box-shadow: none !important;
    border-radius: 0 !important;
    overflow: hidden !important;
@@ -138,33 +137,33 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
    flex-direction: column !important;
    justify-content: space-between !important;
  }
- .header{padding:0.8px 2px;margin-bottom:0.8px;gap:1.5px}
- .header-title .bismillah{font-size:5.5pt;margin-bottom:0}
- .header-title h1{font-size:9pt;margin-bottom:0}
- .header-title p{font-size:4.8pt}
- .school-info{font-size:4.5pt;line-height:1}
- .meta{margin-bottom:0.8px}
- .meta th,.meta td{font-size:4.8pt;padding:0.1px 1px;line-height:1}
+ .header{padding:1px 3px;margin-bottom:1px;gap:2px}
+ .header-title .bismillah{font-size:6pt;margin-bottom:0}
+ .header-title h1{font-size:9.5pt;margin-bottom:0}
+ .header-title p{font-size:5.2pt}
+ .school-info{font-size:4.8pt;line-height:1}
+ .meta{margin-bottom:1px}
+ .meta th,.meta td{font-size:5.2pt;padding:0.2px 1px;line-height:1}
  input,select,textarea{color:#111!important;background:transparent!important;box-shadow:none!important}
  input.control,select.control,.sig-select,.objective textarea,.note textarea,.remarks{border:0!important;border-radius:0!important;padding:0!important;appearance:none;-webkit-appearance:none}
- .objective{padding:0.5px 1.5px;margin-bottom:0.8px}
- .objective label,.note label{font-size:4.8pt;margin-bottom:0}
- .objective textarea{height:10px;resize:none;font-size:5.2pt}
- .eval{margin-bottom:0.8px}
- .eval th{font-size:4.8pt;padding:0.4px 0.2px;line-height:1}
- .eval td{font-size:4.8pt;height:16.5px;padding:0.1px;line-height:1}
- .rate{height:14.5px;font-size:7.5pt;padding:0;border:0!important;background:transparent!important}
- .remarks{height:14.5px;font-size:4.8pt}
- .notes{gap:1px;margin-bottom:0.8px}
- .note{padding:0.5px 1.5px}
- .note textarea{height:11px;font-size:4.8pt;resize:none}
- .signatures{margin-top:0.3px}
- .signatures td{padding:0.5px}
- .sig-title{font-size:4.8pt;margin-bottom:0}
- .sig-select{font-size:4.8pt}
- .sig-name{font-size:5.5pt;padding:0.1px}
- .sig-space{font-size:4.2pt;margin-top:0.3px;padding-top:0.1px}
- .footer{font-size:4.5pt;margin-top:0.3px;padding-top:0.1px}
+ .objective{padding:0.8px 1.5px;margin-bottom:1px}
+ .objective label,.note label{font-size:5.2pt;margin-bottom:0}
+ .objective textarea{height:11px;resize:none;font-size:5.5pt}
+ .eval{margin-bottom:1px}
+ .eval th{font-size:5pt;padding:0.5px 0.2px;line-height:1}
+ .eval td{font-size:5pt;height:18px;padding:0.1px;line-height:1}
+ .rate{height:16px;font-size:8.5pt;padding:0;border:0!important;background:transparent!important}
+ .remarks{height:16px;font-size:5.2pt}
+ .notes{gap:1.5px;margin-bottom:1px}
+ .note{padding:0.8px 1.5px}
+ .note textarea{height:13px;font-size:5.2pt;resize:none}
+ .signatures{margin-top:0.5px}
+ .signatures td{padding:0.8px}
+ .sig-title{font-size:5.2pt;margin-bottom:0}
+ .sig-select{font-size:5.2pt}
+ .sig-name{font-size:5.8pt;padding:0.2px}
+ .sig-space{font-size:4.5pt;margin-top:0.5px;padding-top:0.2px}
+ .footer{font-size:4.8pt;margin-top:0.5px;padding-top:0.2px}
  tr,td,th,.header,.objective,.notes,.signatures{break-inside:avoid;page-break-inside:avoid}
 }
 </style>
