@@ -12,119 +12,119 @@
 }
 *{box-sizing:border-box}
 html{direction:rtl}
-body{margin:0;padding:8px;background:#f1f5f9;color:var(--text);font-family:Tahoma,Arial,sans-serif}
+body{margin:0;padding:0;background:#f1f5f9;color:var(--text);font-family:Tahoma,Arial,sans-serif}
 button,input,select,textarea{font:inherit}
-.toolbar{max-width:210mm;margin:0 auto 12px;background:#fff;padding:12px;border-radius:12px;box-shadow:0 3px 12px #0000000d;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.toolbar{max-width:210mm;margin:8px auto;background:#fff;padding:10px 12px;border-radius:10px;box-shadow:0 3px 12px #0000000d;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
 .toolbar-actions{display:flex;flex-wrap:wrap;gap:7px}
-.btn{border:0;border-radius:8px;padding:10px 13px;background:var(--green);color:#fff;font-size:13px;font-weight:bold;cursor:pointer}
+.btn{border:0;border-radius:8px;padding:8px 12px;background:var(--green);color:#fff;font-size:12px;font-weight:bold;cursor:pointer}
 .btn.secondary{background:#e2e8f0;color:#0f172a}
 .btn.danger{background:#b91c1c}
 .btn.blue{background:#0369a1}
-.status{font-size:12px;color:#166534;min-height:18px}
-.stats{display:flex;flex-wrap:wrap;gap:7px}
-.stat{background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:7px 10px;font-size:12px;font-weight:bold}
-.saved-panel{max-width:210mm;margin:0 auto 12px;background:white;padding:12px;border:1px solid var(--border);border-radius:10px;display:none}
+.status{font-size:11px;color:#166534;min-height:16px}
+.stats{display:flex;flex-wrap:wrap;gap:6px}
+.stat{background:#f8fafc;border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:11px;font-weight:bold}
+.saved-panel{max-width:210mm;margin:0 auto 8px;background:white;padding:10px;border:1px solid var(--border);border-radius:8px;display:none}
 .saved-panel.open{display:block}
-.saved-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:7px 0;border-bottom:1px solid #e2e8f0}
+.saved-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:6px 0;border-bottom:1px solid #e2e8f0}
 .saved-row:last-child{border-bottom:0}
 .saved-row strong{flex:1;min-width:150px}
-.page{width:min(210mm,100%);min-height:0;margin:0 auto;background:white;padding:4mm 5mm;box-shadow:0 2px 16px #00000012;border-radius:5px;overflow:visible}
-.bismillah{text-align:center;font-size:11pt;font-weight:bold;color:#0369a1;margin-bottom:6px}
-.header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:5px 8px;margin-bottom:4px;border:1px solid #bae6fd;border-radius:7px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
-.school-info{font-size:8pt;font-weight:bold;line-height:1.5;min-width:29%}
+.page{width:210mm;min-height:296mm;margin:0 auto;background:white;padding:6mm 8mm;box-shadow:0 2px 16px #00000012;border-radius:0;overflow:visible;display:flex;flex-direction:column;justify-content:space-between}
+.header{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:6px 10px;margin-bottom:6px;border:1px solid #bae6fd;border-radius:6px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
+.school-info{font-size:7.5pt;font-weight:bold;line-height:1.45;min-width:28%}
 .school-info.left{text-align:left}
 .header-title{text-align:center;flex:1}
-.header-title h1{font-size:15pt;color:#0369a1;margin:0 0 2px}
-.header-title p{font-size:8pt;color:#0f766e;font-weight:bold;margin:0}
-.date-input{max-width:115px}
+.header-title .bismillah{font-size:8.5pt;font-weight:bold;color:#0369a1;margin-bottom:2px}
+.header-title h1{font-size:14pt;color:#0369a1;margin:0 0 2px}
+.header-title p{font-size:7.5pt;color:#0f766e;font-weight:bold;margin:0}
+.date-input{max-width:110px}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
-.meta{margin-bottom:4px}
-.meta th,.meta td{border:1px solid var(--border);padding:3px 4px;font-size:8pt;text-align:right;overflow-wrap:anywhere}
+.meta{margin-bottom:6px}
+.meta th,.meta td{border:1px solid var(--border);padding:4px 5px;font-size:7.5pt;text-align:right;overflow-wrap:anywhere}
 .meta th{background:var(--light-blue);color:#0369a1;width:12%;font-weight:bold}
 .meta td{width:21%}
-input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:5px;padding:3px 4px;background:white;color:var(--text);font-size:8.5pt}
-.objective{border:1px solid var(--border);background:#fafafa;border-radius:6px;padding:4px 6px;margin-bottom:4px}
-.objective label,.note label{display:block;font-size:8pt;color:#0369a1;font-weight:bold;margin-bottom:2px}
-.objective textarea{height:29px;resize:vertical}
-.eval{margin-bottom:4px}
-.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:6px 3px;font-size:8pt}
-.eval td{border:1px solid var(--border);padding:4px 3px;font-size:8pt;text-align:center;height:32px}
+input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:4px;padding:3px 4px;background:white;color:var(--text);font-size:8pt}
+.objective{border:1px solid var(--border);background:#fafafa;border-radius:6px;padding:4px 6px;margin-bottom:6px}
+.objective label,.note label{display:block;font-size:7.5pt;color:#0369a1;font-weight:bold;margin-bottom:2px}
+.objective textarea{height:28px;resize:vertical}
+.eval{margin-bottom:6px}
+.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:5px 3px;font-size:7.5pt}
+.eval td{border:1px solid var(--border);padding:3px;font-size:7.5pt;text-align:center;height:29px}
 .eval td.item{text-align:right;font-weight:600}
 .eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:32%}
 .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8%}
 .eval th:nth-child(7){width:24%}
-.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:32px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:4px;font-size:14px;line-height:1}
+.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:27px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:4px;font-size:13px;line-height:1}
 .rate.chosen{background:#dcfce7;color:#166534;border:2px solid #15803d;box-shadow:inset 0 0 0 1px #15803d}
 .rate.zero{background:#fee2e2;color:#991b1b;border:2px solid #b91c1c;box-shadow:inset 0 0 0 1px #b91c1c}
-.remarks{font-size:8pt;padding:4px}
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:4px}
+.remarks{font-size:7.5pt;padding:3px}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
 .note{border:1px solid var(--border);border-radius:6px;padding:4px 6px}
-.note textarea{height:43px;resize:vertical;border:0;padding:2px;font-size:8pt}
-.signatures{margin-top:3px}
-.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:4px;vertical-align:top}
-.sig-title{font-size:8pt;color:#0369a1;font-weight:bold;margin-bottom:3px}
-.sig-select{width:100%;font-size:8pt;border:1px solid var(--border);border-radius:4px;padding:3px;background:white}
-.sig-name{font-size:9pt;font-weight:bold;padding:4px}
-.sig-space{font-size:7.5pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:5px;padding-top:3px}
-.footer{text-align:center;border-top:1.5px solid #16a34a;margin-top:5px;padding-top:4px;font-size:7.5pt;font-weight:bold;color:#475569}
-.small-help{max-width:210mm;margin:10px auto;color:#475569;font-size:12px;line-height:1.7}
+.note textarea{height:40px;resize:vertical;border:0;padding:2px;font-size:7.5pt}
+.signatures{margin-top:4px}
+.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:5px;vertical-align:top}
+.sig-title{font-size:7.5pt;color:#0369a1;font-weight:bold;margin-bottom:3px}
+.sig-select{width:100%;font-size:7.5pt;border:1px solid var(--border);border-radius:4px;padding:3px;background:white}
+.sig-name{font-size:8.5pt;font-weight:bold;padding:3px}
+.sig-space{font-size:7pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:4px;padding-top:3px}
+.footer{text-align:center;border-top:1.5px solid #16a34a;margin-top:4px;padding-top:3px;font-size:7pt;font-weight:bold;color:#475569}
+.small-help{max-width:210mm;margin:8px auto;color:#475569;font-size:11px;line-height:1.6}
 @media(max-width:700px){
- body{padding:6px}
- .toolbar{padding:9px}
+ body{padding:4px}
+ .toolbar{padding:8px}
  .toolbar-actions{width:100%}
  .btn{flex:1}
  .stats{width:100%}
  .stat{flex:1;text-align:center}
- .page{width:100%;min-height:0;padding:7px;overflow:hidden}
- .bismillah{font-size:10pt;margin-bottom:4px}
+ .page{width:100%;min-height:0;padding:6px;box-shadow:none}
  .header{gap:4px;padding:5px}
  .school-info{font-size:7px;min-width:26%}
- .header-title h1{font-size:13px}
- .header-title p{font-size:8px}
- .meta th,.meta td{font-size:10px;padding:3px 2px}
- .control,.sig-select{font-size:12px!important}
+ .header-title .bismillah{font-size:8px}
+ .header-title h1{font-size:12px}
+ .header-title p{font-size:7px}
+ .meta th,.meta td{font-size:9.5px;padding:3px 2px}
+ .control,.sig-select{font-size:11px!important}
  .eval{width:100%;min-width:0;table-layout:fixed}
- .eval th,.eval td{font-size:8.5px;padding:3px 1px;overflow-wrap:anywhere}
- .eval td.item{min-width:0;font-size:8.5px;line-height:1.3}
+ .eval th,.eval td{font-size:8px;padding:2px 1px;overflow-wrap:anywhere}
+ .eval td.item{min-width:0;font-size:8px;line-height:1.2}
  .eval th:nth-child(1){width:5%}.eval th:nth-child(2){width:34%}
  .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8%}
  .eval th:nth-child(7){width:21%}
- .rate{height:30px;font-size:15px;padding:0}
- .remarks{font-size:8.5px!important}
+ .rate{height:26px;font-size:14px;padding:0}
+ .remarks{font-size:8px!important}
  .notes{grid-template-columns:1fr}
- .notes textarea,.objective textarea{font-size:13px}
+ .notes textarea,.objective textarea{font-size:12px}
 }
-@page{size:A4 portrait;margin:4mm}
+@page{size:A4 portrait;margin:0}
 @media print{
- html,body{width:auto!important;height:auto!important;margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ html,body{width:210mm!important;height:297mm!important;margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
  .toolbar,.saved-panel,.small-help{display:none!important}
- .page{width:202mm!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;box-shadow:none!important;border-radius:0!important;overflow:visible!important}
- .bismillah{font-size:8pt;margin-bottom:2px}
- .header{padding:2px 4px;margin-bottom:2px;gap:5px}
- .header-title h1{font-size:12pt;margin-bottom:1px}
- .header-title p{font-size:6.8pt}
- .school-info{font-size:6.5pt;line-height:1.35}
- .meta{margin-bottom:2px}
- .meta th,.meta td{font-size:6.7pt;padding:1.5px 2px;line-height:1.15}
+ .page{width:210mm!important;height:297mm!important;min-height:297mm!important;margin:0!important;padding:6mm 8mm!important;box-shadow:none!important;border-radius:0!important;overflow:hidden!important}
+ .header{padding:4px 6px;margin-bottom:4px;gap:5px}
+ .header-title .bismillah{font-size:7.5pt;margin-bottom:1px}
+ .header-title h1{font-size:11.5pt;margin-bottom:1px}
+ .header-title p{font-size:6.5pt}
+ .school-info{font-size:6.2pt;line-height:1.3}
+ .meta{margin-bottom:4px}
+ .meta th,.meta td{font-size:6.2pt;padding:2px;line-height:1.1}
  input,select,textarea{color:#111!important;background:transparent!important;box-shadow:none!important}
  input.control,select.control,.sig-select,.objective textarea,.note textarea,.remarks{border:0!important;border-radius:0!important;padding:0!important;appearance:none;-webkit-appearance:none}
- .objective{padding:2px 4px;margin-bottom:2px}
- .objective label,.note label{font-size:6.7pt;margin-bottom:1px}
- .objective textarea{height:20px;resize:none;font-size:7pt}
- .eval{margin-bottom:2px}
- .eval th{font-size:6.5pt;padding:2px 1px;line-height:1.1}
- .eval td{font-size:6.5pt;height:20px;padding:2px 1px;line-height:1.1}
- .rate{height:18px;font-size:8pt;padding:0}
- .notes{gap:3px;margin-bottom:2px}
- .note{padding:2px 3px}
- .note textarea{height:25px;font-size:6.5pt;resize:none}
- .signatures{margin-top:2px}
+ .objective{padding:3px 5px;margin-bottom:4px}
+ .objective label,.note label{font-size:6.2pt;margin-bottom:1px}
+ .objective textarea{height:18px;resize:none;font-size:6.5pt}
+ .eval{margin-bottom:4px}
+ .eval th{font-size:6pt;padding:2px 1px;line-height:1.1}
+ .eval td{font-size:6pt;height:18px;padding:1px;line-height:1.1}
+ .rate{height:16px;font-size:7.5pt;padding:0}
+ .notes{gap:4px;margin-bottom:4px}
+ .note{padding:2px 4px}
+ .note textarea{height:22px;font-size:6.2pt;resize:none}
+ .signatures{margin-top:3px}
  .signatures td{padding:2px}
- .sig-title{font-size:6.5pt;margin-bottom:2px}
- .sig-select{font-size:6.5pt}
- .sig-name{font-size:7.5pt;padding:2px}
- .sig-space{font-size:6pt;margin-top:2px;padding-top:2px}
- .footer{font-size:6pt;margin-top:2px;padding-top:2px}
+ .sig-title{font-size:6.2pt;margin-bottom:1px}
+ .sig-select{font-size:6.2pt}
+ .sig-name{font-size:7pt;padding:2px}
+ .sig-space{font-size:5.5pt;margin-top:2px;padding-top:2px}
+ .footer{font-size:5.5pt;margin-top:2px;padding-top:2px}
  tr,td,th,.header,.objective,.notes,.signatures{break-inside:avoid;page-break-inside:avoid}
 }
 </style>
@@ -149,39 +149,43 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 
 <div id="saved-panel" class="saved-panel">
   <strong>البطاقات المحفوظة على هذا الجهاز</strong>
-  <p style="font-size:12px;color:#64748b">الحفظ محلي في هذا المتصفح ولا ينتقل تلقائيًا إلى جهاز آخر. اطبع البطاقة أو احتفظ بنسخة احتياطية عند الحاجة.</p>
+  <p style="font-size:11px;color:#64748b">الحفظ محلي في هذا المتصفح ولا ينتقل تلقائيًا إلى جهاز آخر. اطبع البطاقة أو احتفظ بنسخة احتياطية عند الحاجة.</p>
   <div id="saved-list"></div>
 </div>
 
 <div class="page" id="card-content">
-  <div class="bismillah">بسم الله الرحمن الرحيم</div>
-  <div class="header">
-    <div class="school-info">المملكة العربية السعودية<br>وزارة التعليم<br>الإدارة العامة للتعليم بمنطقة الجوف<br>مدرسة عبدالله بن مسعود الابتدائية</div>
-    <div class="header-title"><h1>بطاقة تبادل الزيارات</h1><p>استمارة تقويم ومتابعة زيارة معلم لزميله</p></div>
-    <div class="school-info left">التاريخ: <input type="date" id="visit-date" class="control date-input" aria-label="تاريخ الزيارة"></div>
-  </div>
+  <div>
+    <div class="header">
+      <div class="school-info">المملكة العربية السعودية<br>وزارة التعليم<br>الإدارة العامة للتعليم بمنطقة الجوف<br>مدرسة عبدالله بن مسعود الابتدائية</div>
+      <div class="header-title">
+        <div class="bismillah">بسم الله الرحمن الرحيم</div>
+        <h1>بطاقة تبادل الزيارات</h1>
+        <p>استمارة تقويم ومتابعة زيارة معلم لزميله</p>
+      </div>
+      <div class="school-info left">التاريخ: <input type="date" id="visit-date" class="control date-input" aria-label="تاريخ الزيارة"></div>
+    </div>
 
-  <table class="meta">
-    <tr>
-      <th>المعلم الزائر</th><td><select id="visitor-select" class="control" data-autosave><option value="">-- اختر المعلم --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select></td>
-      <th>المعلم المزار</th><td><select id="visited-select" class="control" data-autosave><option value="">-- اختر المعلم --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select></td>
-      <th>الصف والفصل</th><td><select id="class-select" class="control" data-autosave>
-        <option value="">-- اختر الفصل --</option><option>ثاني 1</option><option>ثالث 1</option><option>ثالث 2</option><option>رابع 1</option><option>رابع 2</option><option>خامس 1</option><option>خامس 2</option><option>سادس 1</option><option>سادس 2</option>
-      </select></td>
-    </tr>
-    <tr>
-      <th>المادة</th><td><select id="subject-select" class="control" data-autosave>
-        <option value="">-- اختر المادة --</option><option>لغتي</option><option>علوم</option><option>رياضيات</option><option>مهارات رقمية</option><option>إنجليزي</option><option>بدنية</option><option>دراسات إسلامية</option>
-      </select></td>
-      <th>موضوع الدرس</th><td colspan="3"><input id="lesson-topic" class="control" type="text" placeholder="أدخل عنوان الدرس..." data-autosave></td>
-    </tr>
-  </table>
+    <table class="meta">
+      <tr>
+        <th>المعلم الزائر</th><td><select id="visitor-select" class="control" data-autosave><option value="">-- اختر المعلم --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select></td>
+        <th>المعلم المزار</th><td><select id="visited-select" class="control" data-autosave><option value="">-- اختر المعلم --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select></td>
+        <th>الصف والفصل</th><td><select id="class-select" class="control" data-autosave>
+          <option value="">-- اختر الفصل --</option><option>ثاني 1</option><option>ثالث 1</option><option>ثالث 2</option><option>رابع 1</option><option>رابع 2</option><option>خامس 1</option><option>خامس 2</option><option>سادس 1</option><option>سادس 2</option>
+        </select></td>
+      </tr>
+      <tr>
+        <th>المادة</th><td><select id="subject-select" class="control" data-autosave>
+          <option value="">-- اختر المادة --</option><option>لغتي</option><option>علوم</option><option>رياضيات</option><option>مهارات رقمية</option><option>إنجليزي</option><option>بدنية</option><option>دراسات إسلامية</option>
+        </select></td>
+        <th>موضوع الدرس</th><td colspan="3"><input id="lesson-topic" class="control" type="text" placeholder="أدخل عنوان الدرس..." data-autosave></td>
+      </tr>
+    </table>
 
-  <div class="objective"><label for="visit-objective">الهدف من الزيارة:</label><textarea id="visit-objective" placeholder="اكتب الهدف الرئيسي من الزيارة..." data-autosave></textarea></div>
+    <div class="objective"><label for="visit-objective">الهدف من الزيارة:</label><textarea id="visit-objective" placeholder="اكتب الهدف الرئيسي من الزيارة..." data-autosave></textarea></div>
 
-  <table class="eval">
-    <thead><tr><th>م</th><th>المجال / عناصر التقويم</th><th>ممتاز (3)</th><th>جيد جدًا (2)</th><th>جيد (1)</th><th>لم ينفذ (0)</th><th>ملحوظات</th></tr></thead>
-    <tbody id="eval-rows">
+    <table class="eval">
+      <thead><tr><th>م</th><th>المجال / عناصر التقويم</th><th>ممتاز (3)</th><th>جيد جدًا (2)</th><th>جيد (1)</th><th>لم ينفذ (0)</th><th>ملحوظات</th></tr></thead>
+      <tbody id="eval-rows">
 <tr><td>1</td><td class="item">وضوح أهداف الدرس</td><td><select class="rate" data-score="3" data-index="0" aria-label="وضوح أهداف الدرس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="0" aria-label="وضوح أهداف الدرس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="0" aria-label="وضوح أهداف الدرس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="0" aria-label="وضوح أهداف الدرس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="0" aria-label="ملحوظات وضوح أهداف الدرس"></td></tr>
 <tr><td>2</td><td class="item">تسلسل خطوات الدرس</td><td><select class="rate" data-score="3" data-index="1" aria-label="تسلسل خطوات الدرس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="1" aria-label="تسلسل خطوات الدرس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="1" aria-label="تسلسل خطوات الدرس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="1" aria-label="تسلسل خطوات الدرس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="1" aria-label="ملحوظات تسلسل خطوات الدرس"></td></tr>
 <tr><td>3</td><td class="item">وضوح وفصاحة الصوت</td><td><select class="rate" data-score="3" data-index="2" aria-label="وضوح وفصاحة الصوت، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="2" aria-label="وضوح وفصاحة الصوت، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="2" aria-label="وضوح وفصاحة الصوت، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="2" aria-label="وضوح وفصاحة الصوت، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="2" aria-label="ملحوظات وضوح وفصاحة الصوت"></td></tr>
@@ -202,12 +206,13 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 <tr><td>18</td><td class="item">توظيف المكتبة لخدمة الدرس</td><td><select class="rate" data-score="3" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="17" aria-label="ملحوظات توظيف المكتبة لخدمة الدرس"></td></tr>
 <tr><td>19</td><td class="item">تقييم الدرس في نهاية الحصة</td><td><select class="rate" data-score="3" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="18" aria-label="ملحوظات تقييم الدرس في نهاية الحصة"></td></tr>
 <tr><td>20</td><td class="item">الاحتفاظ بالنتائج المميزة من أعمال الطلاب</td><td><select class="rate" data-score="3" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="19" aria-label="ملحوظات الاحتفاظ بالنتائج المميزة من أعمال الطلاب"></td></tr>
-</tbody>
-  </table>
+      </tbody>
+    </table>
 
-  <div class="notes">
-    <div class="note"><label for="positive-notes">الملاحظات الإيجابية للمعلم الزائر:</label><textarea id="positive-notes" placeholder="اكتب النقاط الإيجابية والمميزة..." data-autosave></textarea></div>
-    <div class="note"><label for="recommendations">التوصيات والمقترحات للتحسين:</label><textarea id="recommendations" placeholder="اكتب التوصيات والمقترحات..." data-autosave></textarea></div>
+    <div class="notes">
+      <div class="note"><label for="positive-notes">الملاحظات الإيجابية للمعلم الزائر:</label><textarea id="positive-notes" placeholder="اكتب النقاط الإيجابية والمميزة..." data-autosave></textarea></div>
+      <div class="note"><label for="recommendations">التوصيات والمقترحات للتحسين:</label><textarea id="recommendations" placeholder="اكتب التوصيات والمقترحات..." data-autosave></textarea></div>
+    </div>
   </div>
 
   <div class="signatures">
@@ -219,7 +224,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
     <div class="footer">إعداد وتصميم مساعد إداري: خالد شاقي الرويلي</div>
   </div>
 </div>
-<div class="small-help">التقييم: اضغط على خانة الدرجة المناسبة لتتحول إلى ✔️، ويمكن اختيار درجة واحدة فقط لكل مجال. اضغط الدرجة المختارة مرة أخرى لإلغاء التحديد. ملاحظة: تحفظ البطاقات على الجهاز والمتصفح الحاليين.</div>
+<div class="small-help">التقييم: اضغط على خانة الدرجة المناسبة لتتحول إلى ✔️، ويمكن اختيار درجة واحدة فقط لكل مجال. ملاحظة: تحفظ البطاقات على الجهاز والمتصفح الحاليين.</div>
 
 <script>
 const teacherNames = [
