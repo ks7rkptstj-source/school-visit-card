@@ -28,14 +28,14 @@ button,input,select,textarea{font:inherit}
 .saved-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:3px 0;border-bottom:1px solid #e2e8f0}
 .saved-row strong{flex:1;min-width:140px}
 
-/* إطار ورقة A4 لإلغاء الفراغات والزوايا البيضاء وضمان صفحة واحدة قطعية */
+/* إطار ورقة A4 مصمم بضغط عالي لملء صفحة واحدة تلقائياً بدون تدخل المستخدم */
 .page{
   width: 210mm;
   height: 297mm;
   max-height: 297mm;
   margin: 0 auto;
   background: white;
-  padding: 2mm 3mm;
+  padding: 1.5mm 2.5mm;
   box-shadow: 0 4px 20px #0000001a;
   box-sizing: border-box;
   display: flex;
@@ -44,49 +44,48 @@ button,input,select,textarea{font:inherit}
   overflow: hidden;
 }
 
-.header{display:flex;justify-content:space-between;align-items:center;padding:1px 3px;margin-bottom:1px;border:1px solid #bae6fd;border-radius:3px;background:linear-gradient(135deg,var(--light-blue),var(--light-green))}
-.school-info{font-size:5pt;font-weight:bold;line-height:1;min-width:30%}
+.header{display:flex;justify-content:space-between;align-items:center;padding:1px 2px;margin-bottom:0.5px;border:1px solid #bae6fd;border-radius:3px;background:linear-gradient(135deg,var(--light-blue),var(--light-green))}
+.school-info{font-size:4.8pt;font-weight:bold;line-height:1;min-width:30%}
 .school-info.left{text-align:left}
 .header-title{text-align:center;flex:1}
-.header-title h1{font-size:9.5pt;color:var(--blue);margin:0 0 0.5px;font-weight:bold}
-.header-title p{font-size:5pt;color:var(--green);font-weight:bold;margin:0}
-.date-input{max-width:80px}
+.header-title h1{font-size:9pt;color:var(--blue);margin:0 0 0.2px;font-weight:bold}
+.header-title p{font-size:4.8pt;color:var(--green);font-weight:bold;margin:0}
+.date-input{max-width:75px}
 
 table{width:100%;border-collapse:collapse;table-layout:fixed}
-.meta{margin-bottom:1px}
-.meta th,.meta td{border:1px solid var(--border);padding:0.4px 1.2px;font-size:5pt;text-align:right}
+.meta{margin-bottom:0.5px}
+.meta th,.meta td{border:1px solid var(--border);padding:0.3px 1px;font-size:4.8pt;text-align:right}
 .meta th{background:var(--light-blue);color:var(--blue);width:13%;font-weight:bold}
 .meta td{width:20.3%}
-input.control,select.control,textarea.control,.notes input[type="text"],.objective textarea,.remarks{width:100%;min-width:0;border:1px solid var(--border);border-radius:2px;padding:0.4px 1.2px;background:white;color:var(--text);font-size:5pt}
+input.control,select.control,textarea.control,.notes input[type="text"],.objective textarea,.remarks{width:100%;min-width:0;border:1px solid var(--border);border-radius:2px;padding:0.3px 1px;background:white;color:var(--text);font-size:4.8pt}
 
-.objective{border:1px solid var(--border);background:#fafafa;border-radius:2px;padding:1px 2px;margin-bottom:1px}
-.objective label,.note label{display:block;font-size:5pt;color:var(--blue);font-weight:bold;margin-bottom:0.2px}
-.objective textarea{height:9px;resize:none}
+.objective{border:1px solid var(--border);background:#fafafa;border-radius:2px;padding:0.8px 1.5px;margin-bottom:0.5px}
+.objective label,.note label{display:block;font-size:4.8pt;color:var(--blue);font-weight:bold;margin-bottom:0.1px}
+.objective textarea{height:8px;resize:none}
 
-/* تثبيت صفوف الجدول بـ 12.5 ملمتر */
-.eval{margin-bottom:1px}
-.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:0.3px;font-size:4.8pt;font-weight:bold}
-.eval td{border:1px solid var(--border);padding:0;font-size:4.8pt;text-align:center;height:12.5px !important;max-height:12.5px !important;}
+/* ضغط شديد لصفوف الجدول لتنزل مرتاحة في صفحة واحدة برمجياً */
+.eval{margin-bottom:0.5px}
+.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:0.2px;font-size:4.5pt;font-weight:bold}
+.eval td{border:1px solid var(--border);padding:0;font-size:4.5pt;text-align:center;height:11.5px !important;max-height:11.5px !important;}
 .eval td.item{text-align:right;font-weight:600;padding-right:2px;line-height:1}
 .eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:34%}
 .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8.5%}
 .eval th:nth-child(7){width:28%}
-.rate{display:block;width:100%;height:11px !important;border:1px solid var(--border);background:#fff;color:var(--red);font-weight:bold;cursor:pointer;border-radius:2px;font-size:6.5pt;line-height:1;text-align:center;padding:0}
+.rate{display:block;width:100%;height:10px !important;border:1px solid var(--border);background:#fff;color:var(--red);font-weight:bold;cursor:pointer;border-radius:2px;font-size:6pt;line-height:1;text-align:center;padding:0}
 .rate.chosen{background:var(--light-green);color:var(--green);border:1px solid var(--green)}
-.remarks{font-size:4.8pt;padding:0;height:11px !important;border:0}
+.remarks{font-size:4.5pt;padding:0;height:10px !important;border:0}
 
-/* تعديل حقول الملاحظات والتوصيات لتصبح حقول نصية بسطر واحد ثابت وغير قابلة للتمدد */
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:1px}
-.note{border:1px solid var(--border);border-radius:2px;padding:1px 2px}
-.notes input[type="text"]{height:14px !important;max-height:14px !important;border:0;padding:0;font-size:5pt;background:transparent}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;margin-bottom:0.5px}
+.note{border:1px solid var(--border);border-radius:2px;padding:0.8px 1.5px}
+.notes input[type="text"]{height:10px !important;max-height:10px !important;border:0;padding:0;font-size:4.8pt;background:transparent}
 
-.signatures{margin-top:0.2px}
-.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:1px;vertical-align:top}
-.sig-title{font-size:5pt;color:var(--blue);font-weight:bold;margin-bottom:0.2px}
-.sig-select{width:100%;font-size:5pt;border:1px solid var(--border);border-radius:2px;padding:0.2px;background:white}
-.sig-name{font-size:5.5pt;font-weight:bold;padding:0.2px}
-.sig-space{font-size:4pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:0.4px;padding-top:0.1px}
-.footer{text-align:center;border-top:1px solid var(--green);margin-top:0.4px;padding-top:0.1px;font-size:4pt;font-weight:bold;color:var(--muted)}
+.signatures{margin-top:0.1px}
+.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:0.8px;vertical-align:top}
+.sig-title{font-size:4.8pt;color:var(--blue);font-weight:bold;margin-bottom:0.1px}
+.sig-select{width:100%;font-size:4.8pt;border:1px solid var(--border);border-radius:2px;padding:0.1px;background:white}
+.sig-name{font-size:5.2pt;font-weight:bold;padding:0.1px}
+.sig-space{font-size:3.8pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:0.2px;padding-top:0.1px}
+.footer{text-align:center;border-top:1px solid var(--green);margin-top:0.2px;padding-top:0.1px;font-size:3.8pt;font-weight:bold;color:var(--muted)}
 .small-help{max-width:210mm;margin:4px auto;color:var(--muted);font-size:10px;line-height:1.4}
 
 @media(max-width:700px){
@@ -96,13 +95,13 @@ input.control,select.control,textarea.control,.notes input[type="text"],.objecti
  .btn{flex:1}
  .stats{width:100%}
  .stat{flex:1;text-align:center}
- .page{width:100%;height:auto;padding:6px;box-shadow:none}
- .eval th,.eval td{font-size:7.5px;height:22px !important}
- .rate{height:20px !important;font-size:11px}
+ .page{width:100%;height:auto;padding:4px;box-shadow:none}
+ .eval th,.eval td{font-size:7px;height:20px !important}
+ .rate{height:18px !important;font-size:10px}
  .notes{grid-template-columns:1fr}
 }
 
-/* أوامر الطباعة الحصرية لإلغاء أي زوايا بيضاء واحتواء الصفحة بامتياز */
+/* أوامر الطباعة البرمجية للتحجيم التلقائي ومنع الصفحات المتعددة */
 @page{
   size: 210mm 297mm;
   margin: 0mm;
@@ -115,7 +114,7 @@ input.control,select.control,textarea.control,.notes input[type="text"],.objecti
    height: 297mm !important;
    max-height: 297mm !important;
    margin: 0 !important;
-   padding: 2mm 3mm !important;
+   padding: 1.5mm 2.5mm !important;
    box-shadow: none !important;
    border-radius: 0 !important;
    overflow: hidden !important;
@@ -123,33 +122,35 @@ input.control,select.control,textarea.control,.notes input[type="text"],.objecti
    display: flex !important;
    flex-direction: column !important;
    justify-content: space-between !important;
+   transform: scale(0.95); /* تحجيم تلقائي برمجياً ليطبع المعلم بدون أي تعديل */
+   transform-origin: top center;
  }
- .header{padding:1px 2px;margin-bottom:0.4px}
- .header-title h1{font-size:9pt;margin-bottom:0.2px}
- .header-title p{font-size:4.8pt}
- .school-info{font-size:4.5pt;line-height:1}
- .meta{margin-bottom:0.4px}
- .meta th,.meta td{font-size:4.8pt;padding:0.1px 1px}
+ .header{padding:0.8px 1.5px;margin-bottom:0.3px}
+ .header-title h1{font-size:8.5pt;margin-bottom:0.1px}
+ .header-title p{font-size:4.5pt}
+ .school-info{font-size:4.2pt;line-height:1}
+ .meta{margin-bottom:0.3px}
+ .meta th,.meta td{font-size:4.5pt;padding:0.1px 0.8px}
  input,select,textarea{color:#000!important;background:transparent!important;box-shadow:none!important}
  input.control,select.control,.sig-select,.objective textarea,.notes input[type="text"],.remarks{border:0!important;border-radius:0!important;padding:0!important;appearance:none;-webkit-appearance:none}
- .objective{padding:0.4px 1px;margin-bottom:0.4px}
- .objective label,.note label{font-size:4.8pt;margin-bottom:0}
- .objective textarea{height:8px;font-size:4.8pt}
- .eval{margin-bottom:0.4px}
- .eval th{font-size:4.2pt;padding:0.2px 0.1px}
- .eval td{font-size:4.2pt;height:12.5px !important;max-height:12.5px !important;padding:0}
- .rate{height:11px !important;font-size:6pt;border:0!important;background:transparent!important}
- .remarks{height:11px !important;font-size:4.2pt}
- .notes{gap:1px;margin-bottom:0.4px}
- .note{padding:0.4px 1px}
- .notes input[type="text"]{height:11px !important;font-size:4.8pt}
+ .objective{padding:0.3px 0.8px;margin-bottom:0.3px}
+ .objective label,.note label{font-size:4.5pt;margin-bottom:0}
+ .objective textarea{height:7px;font-size:4.5pt}
+ .eval{margin-bottom:0.3px}
+ .eval th{font-size:4pt;padding:0.1px}
+ .eval td{font-size:4pt;height:11px !important;max-height:11px !important;padding:0}
+ .rate{height:10px !important;font-size:5.5pt;border:0!important;background:transparent!important}
+ .remarks{height:10px !important;font-size:4pt}
+ .notes{gap:0.8px;margin-bottom:0.3px}
+ .note{padding:0.3px 0.8px}
+ .notes input[type="text"]{height:10px !important;font-size:4.5pt}
  .signatures{margin-top:0.1px}
- .signatures td{padding:0.4px}
- .sig-title{font-size:4.8pt;margin-bottom:0}
- .sig-select{font-size:4.8pt}
- .sig-name{font-size:5.2pt;padding:0.1px}
- .sig-space{font-size:3.8pt;margin-top:0.1px;padding-top:0.1px}
- .footer{font-size:3.8pt;margin-top:0.1px;padding-top:0.1px}
+ .signatures td{padding:0.3px}
+ .sig-title{font-size:4.5pt;margin-bottom:0}
+ .sig-select{font-size:4.5pt}
+ .sig-name{font-size:4.8pt;padding:0.1px}
+ .sig-space{font-size:3.5pt;margin-top:0.1px;padding-top:0.1px}
+ .footer{font-size:3.5pt;margin-top:0.1px;padding-top:0.1px}
  tr,td,th,.header,.objective,.notes,.signatures{break-inside:avoid;page-break-inside:avoid}
 }
 </style>
@@ -440,7 +441,7 @@ function init() {
   buildTable();
   document.getElementById("visit-date").value = new Date().toISOString().slice(0,10);
   document.getElementById("visitor-select").addEventListener("change", (e) => { syncPeople("visitor-select"); scheduleDraftSave(); });
-  document.getElementById("visitor-sig-select").addEventListener("change", (e) => { syncPeople("visitor-sig-select"); scheduleDraftSave(); });
+  document.getElementById("visitor-sig-select").addEventListener("change", (e, s) => { syncPeople("visitor-sig-select"); scheduleDraftSave(); });
   document.getElementById("visited-select").addEventListener("change", (e) => { syncPeople("visited-select"); scheduleDraftSave(); });
   document.getElementById("visited-sig-select").addEventListener("change", (e) => { syncPeople("visited-sig-select"); scheduleDraftSave(); });
   document.querySelectorAll("[data-autosave]").forEach(el => {
