@@ -13,18 +13,18 @@
 *{box-sizing:border-box}
 html, body{margin:0;padding:0;background:#f1f5f9;color:var(--text);font-family:Tahoma,Arial,sans-serif}
 button,input,select,textarea{font:inherit}
-.toolbar{max-width:210mm;margin:4px auto;background:#fff;padding:5px 10px;border-radius:6px;box-shadow:0 2px 6px #0000000d;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
+.toolbar{max-width:210mm;margin:4px auto;background:#fff;padding:4px 8px;border-radius:6px;box-shadow:0 2px 6px #0000000d;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
 .toolbar-actions{display:flex;flex-wrap:wrap;gap:4px}
-.btn{border:0;border-radius:4px;padding:5px 9px;background:var(--green);color:#fff;font-size:11px;font-weight:bold;cursor:pointer}
+.btn{border:0;border-radius:4px;padding:4px 8px;background:var(--green);color:#fff;font-size:11px;font-weight:bold;cursor:pointer}
 .btn.secondary{background:#e2e8f0;color:#0f172a}
 .btn.danger{background:#b91c1c}
 .btn.blue{background:#0369a1}
 .status{font-size:10px;color:#166534;min-height:14px}
 .stats{display:flex;flex-wrap:wrap;gap:5px}
-.stat{background:#f8fafc;border:1px solid var(--border);border-radius:4px;padding:2px 6px;font-size:10px;font-weight:bold}
-.saved-panel{max-width:210mm;margin:0 auto 6px;background:white;padding:8px;border:1px solid var(--border);border-radius:6px;display:none}
+.stat{background:#f8fafc;border:1px solid var(--border);border-radius:4px;padding:2px 5px;font-size:10px;font-weight:bold}
+.saved-panel{max-width:210mm;margin:0 auto 4px;background:white;padding:6px;border:1px solid var(--border);border-radius:6px;display:none}
 .saved-panel.open{display:block}
-.saved-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:4px 0;border-bottom:1px solid #e2e8f0}
+.saved-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:3px 0;border-bottom:1px solid #e2e8f0}
 .saved-row:last-child{border-bottom:0}
 .saved-row strong{flex:1;min-width:140px}
 
@@ -44,48 +44,48 @@ button,input,select,textarea{font:inherit}
   overflow:hidden;
 }
 
-.header{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:2px 5px;margin-bottom:2px;border:1px solid #bae6fd;border-radius:4px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
-.school-info{font-size:6.5pt;font-weight:bold;line-height:1.2;min-width:27%}
+.header{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:2px 4px;margin-bottom:2px;border:1px solid #bae6fd;border-radius:4px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
+.school-info{font-size:6pt;font-weight:bold;line-height:1.15;min-width:27%}
 .school-info.left{text-align:left}
 .header-title{text-align:center;flex:1}
-.header-title .bismillah{font-size:7.5pt;font-weight:bold;color:#0369a1;margin-bottom:0}
-.header-title h1{font-size:11.5pt;color:#0369a1;margin:0 0 0}
-.header-title p{font-size:6.5pt;color:#0f766e;font-weight:bold;margin:0}
-.date-input{max-width:100px}
+.header-title .bismillah{font-size:7pt;font-weight:bold;color:#0369a1;margin-bottom:0}
+.header-title h1{font-size:10.5pt;color:#0369a1;margin:0 0 0}
+.header-title p{font-size:6pt;color:#0f766e;font-weight:bold;margin:0}
+.date-input{max-width:95px}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 .meta{margin-bottom:2px}
-.meta th,.meta td{border:1px solid var(--border);padding:1.5px 2px;font-size:6.5pt;text-align:right;overflow-wrap:anywhere}
+.meta th,.meta td{border:1px solid var(--border);padding:1px 2px;font-size:6pt;text-align:right;overflow-wrap:anywhere}
 .meta th{background:var(--light-blue);color:#0369a1;width:12%;font-weight:bold}
 .meta td{width:21%}
-input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:3px;padding:1px 2px;background:white;color:var(--text);font-size:6.5pt}
-.objective{border:1px solid var(--border);background:#fafafa;border-radius:3px;padding:2px 3px;margin-bottom:2px}
-.objective label,.note label{display:block;font-size:6.5pt;color:#0369a1;font-weight:bold;margin-bottom:0}
-.objective textarea{height:16px;resize:vertical}
+input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:2px;padding:1px 2px;background:white;color:var(--text);font-size:6pt}
+.objective{border:1px solid var(--border);background:#fafafa;border-radius:2px;padding:1px 3px;margin-bottom:2px}
+.objective label,.note label{display:block;font-size:6pt;color:#0369a1;font-weight:bold;margin-bottom:0}
+.objective textarea{height:14px;resize:vertical}
 
 /* جدول التقييم المدمج بدون فراغات وبحجم مريح للعين */
 .eval{margin-bottom:2px}
-.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:2px 1px;font-size:6.5pt}
-.eval td{border:1px solid var(--border);padding:1px;font-size:6.5pt;text-align:center;height:24px}
-.eval td.item{text-align:right;font-weight:600;line-height:1.1}
+.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:1.5px 1px;font-size:6pt}
+.eval td{border:1px solid var(--border);padding:0.5px;font-size:6pt;text-align:center;height:21px}
+.eval td.item{text-align:right;font-weight:600;line-height:1.05}
 .eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:35%}
 .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8.5%}
 .eval th:nth-child(7){width:27%}
-.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:22px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:2px;font-size:11px;line-height:1;text-align:center}
+.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:19px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:2px;font-size:10px;line-height:1;text-align:center}
 .rate.chosen{background:#dcfce7;color:#166534;border:2px solid #15803d;box-shadow:inset 0 0 0 1px #15803d}
 .rate.zero{background:#fee2e2;color:#991b1b;border:2px solid #b91c1c;box-shadow:inset 0 0 0 1px #b91c1c}
-.remarks{font-size:6.5pt;padding:1px;height:22px}
+.remarks{font-size:6pt;padding:0.5px;height:19px}
 
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:2px}
-.note{border:1px solid var(--border);border-radius:3px;padding:2px 3px}
-.note textarea{height:22px;resize:vertical;border:0;padding:1px;font-size:6.5pt}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px}
+.note{border:1px solid var(--border);border-radius:2px;padding:1px 3px}
+.note textarea{height:18px;resize:vertical;border:0;padding:1px;font-size:6pt}
 
 .signatures{margin-top:1px}
-.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:2px;vertical-align:top}
-.sig-title{font-size:6.5pt;color:#0369a1;font-weight:bold;margin-bottom:1px}
-.sig-select{width:100%;font-size:6.5pt;border:1px solid var(--border);border-radius:3px;padding:1px;background:white}
-.sig-name{font-size:7pt;font-weight:bold;padding:1px}
-.sig-space{font-size:5.5pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:2px;padding-top:1px}
-.footer{text-align:center;border-top:1.5px solid #16a34a;margin-top:2px;padding-top:1px;font-size:6pt;font-weight:bold;color:#475569}
+.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:1.5px;vertical-align:top}
+.sig-title{font-size:6pt;color:#0369a1;font-weight:bold;margin-bottom:0}
+.sig-select{width:100%;font-size:6pt;border:1px solid var(--border);border-radius:2px;padding:1px;background:white}
+.sig-name{font-size:6.5pt;font-weight:bold;padding:0.5px}
+.sig-space{font-size:5pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:1px;padding-top:0.5px}
+.footer{text-align:center;border-top:1.5px solid #16a34a;margin-top:1px;padding-top:1px;font-size:5.5pt;font-weight:bold;color:#475569}
 .small-help{max-width:210mm;margin:4px auto;color:#475569;font-size:10px;line-height:1.4}
 
 @media(max-width:700px){
@@ -115,7 +115,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .notes textarea,.objective textarea{font-size:11px}
 }
 
-/* إعدادات الطباعة للالتزام بصفحة واحدة A4 بالكامل */
+/* إعدادات الطباعة للالتزام بصفحة واحدة A4 بالكامل وبدون أي فراغات */
 @page{
   size:A4 portrait;
   margin:0mm;
@@ -128,7 +128,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
    height:297mm!important;
    max-height:297mm!important;
    margin:0!important;
-   padding:2mm 4mm!important;
+   padding:1.5mm 3mm!important;
    box-shadow:none!important;
    border-radius:0!important;
    overflow:hidden!important;
@@ -137,33 +137,33 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
    flex-direction:column!important;
    justify-content:space-between!important;
  }
- .header{padding:2px 4px;margin-bottom:2px;gap:3px}
- .header-title .bismillah{font-size:7pt;margin-bottom:0}
- .header-title h1{font-size:10.5pt;margin-bottom:0}
- .header-title p{font-size:5.8pt}
- .school-info{font-size:5.5pt;line-height:1.1}
- .meta{margin-bottom:2px}
- .meta th,.meta td{font-size:5.8pt;padding:1px;line-height:1}
+ .header{padding:1.5px 3px;margin-bottom:1px;gap:2px}
+ .header-title .bismillah{font-size:6.5pt;margin-bottom:0}
+ .header-title h1{font-size:10pt;margin-bottom:0}
+ .header-title p{font-size:5.5pt}
+ .school-info{font-size:5.2pt;line-height:1.05}
+ .meta{margin-bottom:1px}
+ .meta th,.meta td{font-size:5.5pt;padding:0.5px 1px;line-height:1}
  input,select,textarea{color:#111!important;background:transparent!important;box-shadow:none!important}
  input.control,select.control,.sig-select,.objective textarea,.note textarea,.remarks{border:0!important;border-radius:0!important;padding:0!important;appearance:none;-webkit-appearance:none}
- .objective{padding:1.5px 2px;margin-bottom:2px}
- .objective label,.note label{font-size:5.8pt;margin-bottom:0}
- .objective textarea{height:14px;resize:none;font-size:6pt}
- .eval{margin-bottom:2px}
- .eval th{font-size:5.5pt;padding:1px;line-height:1}
- .eval td{font-size:5.5pt;height:22px;padding:0.5px;line-height:1}
- .rate{height:20px;font-size:9.5pt;padding:0;border:0!important;background:transparent!important}
- .remarks{height:20px;font-size:5.8pt}
- .notes{gap:2px;margin-bottom:2px}
- .note{padding:1.5px 2px}
- .note textarea{height:16px;font-size:5.8pt;resize:none}
+ .objective{padding:1px 2px;margin-bottom:1px}
+ .objective label,.note label{font-size:5.5pt;margin-bottom:0}
+ .objective textarea{height:12px;resize:none;font-size:5.8pt}
+ .eval{margin-bottom:1px}
+ .eval th{font-size:5.2pt;padding:1px 0.5px;line-height:1}
+ .eval td{font-size:5.2pt;height:20px;padding:0.2px;line-height:1}
+ .rate{height:18px;font-size:9pt;padding:0;border:0!important;background:transparent!important}
+ .remarks{height:18px;font-size:5.5pt}
+ .notes{gap:2px;margin-bottom:1px}
+ .note{padding:1px 2px}
+ .note textarea{height:15px;font-size:5.5pt;resize:none}
  .signatures{margin-top:1px}
  .signatures td{padding:1px}
- .sig-title{font-size:5.8pt;margin-bottom:0}
- .sig-select{font-size:5.8pt}
- .sig-name{font-size:6.2pt;padding:0.5px}
- .sig-space{font-size:5pt;margin-top:1px;padding-top:0.5px}
- .footer{font-size:5.2pt;margin-top:1px;padding-top:0.5px}
+ .sig-title{font-size:5.5pt;margin-bottom:0}
+ .sig-select{font-size:5.5pt}
+ .sig-name{font-size:6pt;padding:0.5px}
+ .sig-space{font-size:4.8pt;margin-top:0.5px;padding-top:0.5px}
+ .footer{font-size:5pt;margin-top:0.5px;padding-top:0.5px}
  tr,td,th,.header,.objective,.notes,.signatures{break-inside:avoid;page-break-inside:avoid}
 }
 </style>
