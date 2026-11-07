@@ -29,6 +29,7 @@ button,input,select,textarea{font:inherit}
 .saved-row:last-child{border-bottom:0}
 .saved-row strong{flex:1;min-width:150px}
 .page{width:min(210mm,100%);min-height:0;margin:0 auto;background:white;padding:4mm 5mm;box-shadow:0 2px 16px #00000012;border-radius:5px;overflow:visible}
+.bismillah{text-align:center;font-size:11pt;font-weight:bold;color:#0369a1;margin-bottom:6px}
 .header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:5px 8px;margin-bottom:4px;border:1px solid #bae6fd;border-radius:7px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
 .school-info{font-size:8pt;font-weight:bold;line-height:1.5;min-width:29%}
 .school-info.left{text-align:left}
@@ -46,16 +47,16 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 .objective label,.note label{display:block;font-size:8pt;color:#0369a1;font-weight:bold;margin-bottom:2px}
 .objective textarea{height:29px;resize:vertical}
 .eval{margin-bottom:4px}
-.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:4px 2px;font-size:7.5pt}
-.eval td{border:1px solid var(--border);padding:2px 3px;font-size:7.5pt;text-align:center;height:22px}
+.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:6px 3px;font-size:8pt}
+.eval td{border:1px solid var(--border);padding:4px 3px;font-size:8pt;text-align:center;height:32px}
 .eval td.item{text-align:right;font-weight:600}
 .eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:32%}
 .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8%}
 .eval th:nth-child(7){width:24%}
-.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:29px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:4px;font-size:13px;line-height:1}
+.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:32px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:4px;font-size:14px;line-height:1}
 .rate.chosen{background:#dcfce7;color:#166534;border:2px solid #15803d;box-shadow:inset 0 0 0 1px #15803d}
 .rate.zero{background:#fee2e2;color:#991b1b;border:2px solid #b91c1c;box-shadow:inset 0 0 0 1px #b91c1c}
-.remarks{font-size:7.5pt;padding:2px}
+.remarks{font-size:8pt;padding:4px}
 .notes{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:4px}
 .note{border:1px solid var(--border);border-radius:6px;padding:4px 6px}
 .note textarea{height:43px;resize:vertical;border:0;padding:2px;font-size:8pt}
@@ -75,6 +76,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .stats{width:100%}
  .stat{flex:1;text-align:center}
  .page{width:100%;min-height:0;padding:7px;overflow:hidden}
+ .bismillah{font-size:10pt;margin-bottom:4px}
  .header{gap:4px;padding:5px}
  .school-info{font-size:7px;min-width:26%}
  .header-title h1{font-size:13px}
@@ -82,13 +84,13 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .meta th,.meta td{font-size:10px;padding:3px 2px}
  .control,.sig-select{font-size:12px!important}
  .eval{width:100%;min-width:0;table-layout:fixed}
- .eval th,.eval td{font-size:8px;padding:2px 1px;overflow-wrap:anywhere}
- .eval td.item{min-width:0;font-size:8px;line-height:1.25}
+ .eval th,.eval td{font-size:8.5px;padding:3px 1px;overflow-wrap:anywhere}
+ .eval td.item{min-width:0;font-size:8.5px;line-height:1.3}
  .eval th:nth-child(1){width:5%}.eval th:nth-child(2){width:34%}
  .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8%}
  .eval th:nth-child(7){width:21%}
- .rate{height:27px;font-size:15px;padding:0}
- .remarks{font-size:8px!important}
+ .rate{height:30px;font-size:15px;padding:0}
+ .remarks{font-size:8.5px!important}
  .notes{grid-template-columns:1fr}
  .notes textarea,.objective textarea{font-size:13px}
 }
@@ -97,6 +99,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  html,body{width:auto!important;height:auto!important;margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
  .toolbar,.saved-panel,.small-help{display:none!important}
  .page{width:202mm!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;box-shadow:none!important;border-radius:0!important;overflow:visible!important}
+ .bismillah{font-size:8pt;margin-bottom:2px}
  .header{padding:2px 4px;margin-bottom:2px;gap:5px}
  .header-title h1{font-size:12pt;margin-bottom:1px}
  .header-title p{font-size:6.8pt}
@@ -109,9 +112,9 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .objective label,.note label{font-size:6.7pt;margin-bottom:1px}
  .objective textarea{height:20px;resize:none;font-size:7pt}
  .eval{margin-bottom:2px}
- .eval th{font-size:6.2pt;padding:1.5px 1px;line-height:1.1}
- .eval td{font-size:6.2pt;height:16px;padding:1px;line-height:1.1}
- .rate{height:14px;font-size:7.5pt;padding:0}
+ .eval th{font-size:6.5pt;padding:2px 1px;line-height:1.1}
+ .eval td{font-size:6.5pt;height:20px;padding:2px 1px;line-height:1.1}
+ .rate{height:18px;font-size:8pt;padding:0}
  .notes{gap:3px;margin-bottom:2px}
  .note{padding:2px 3px}
  .note textarea{height:25px;font-size:6.5pt;resize:none}
@@ -151,10 +154,11 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 </div>
 
 <div class="page" id="card-content">
+  <div class="bismillah">بسم الله الرحمن الرحيم</div>
   <div class="header">
     <div class="school-info">المملكة العربية السعودية<br>وزارة التعليم<br>الإدارة العامة للتعليم بمنطقة الجوف<br>مدرسة عبدالله بن مسعود الابتدائية</div>
     <div class="header-title"><h1>بطاقة تبادل الزيارات</h1><p>استمارة تقويم ومتابعة زيارة معلم لزميله</p></div>
-    <div class="school-info left">بسم الله الرحمن الرحيم<br>التاريخ: <input type="date" id="visit-date" class="control date-input" aria-label="تاريخ الزيارة"></div>
+    <div class="school-info left">التاريخ: <input type="date" id="visit-date" class="control date-input" aria-label="تاريخ الزيارة"></div>
   </div>
 
   <table class="meta">
@@ -215,7 +219,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
     <div class="footer">إعداد وتصميم مساعد إداري: خالد شاقي الرويلي</div>
   </div>
 </div>
-<div class="small-help">التقييم: اضغط على علامة ❌ في خانة الدرجة المناسبة لتتحول إلى ✔️، ويمكن اختيار درجة واحدة فقط لكل مجال. اضغط الدرجة المختارة مرة أخرى لإلغاء التحديد. قائمة المعلمين: تحتوي قائمتا «المعلم الزائر» و«المعلم المزار» على جميع الأسماء الـ32 نفسها، ويمكن اختيار أي اسم في أي من القائمتين. ملاحظة: تحفظ البطاقات على الجهاز والمتصفح الحاليين. لا تعتمد على الحفظ المحلي وحده للأرشفة الرسمية؛ اطبع نسخة PDF واحتفظ بها في مكان آمن. لا تُدخل معلومات شخصية حساسة لا تحتاجها البطاقة.</div>
+<div class="small-help">التقييم: اضغط على خانة الدرجة المناسبة لتتحول إلى ✔️، ويمكن اختيار درجة واحدة فقط لكل مجال. اضغط الدرجة المختارة مرة أخرى لإلغاء التحديد. ملاحظة: تحفظ البطاقات على الجهاز والمتصفح الحاليين.</div>
 
 <script>
 const teacherNames = [
@@ -252,7 +256,6 @@ const teacherNames = [
 "فريد طارف الدغمان",
 "وليد عبدالله المعيقل"
 ];
-// القائمتان تستخدمان جميع الأسماء نفسها؛ يمكن اختيار أي معلم في أي دور.
 const visitorNames = teacherNames;
 const visitedNames = teacherNames;
 const evalItems = [
@@ -292,7 +295,6 @@ function initTable() {
       const idx = Number(select.dataset.index);
       if (!Number.isInteger(idx) || idx < 0 || idx >= 20) return;
       scores[idx] = select.value === "" ? -1 : Number(select.value);
-      // كل مجال يسمح بعلامة صح واحدة فقط، وتبقى الخانات فارغة حتى يختار المستخدم.
       updateRateRow(idx);
       calculateTotal();
       scheduleDraftSave();
