@@ -28,7 +28,7 @@ button,input,select,textarea{font:inherit}
 .saved-row:last-child{border-bottom:0}
 .saved-row strong{flex:1;min-width:140px}
 
-/* استغلال كامل مساحة ورقة A4 وتقليل الهوامش الخارجية للحد الأدنى المتوازن */
+/* تثبيت مقاس ورقة A4 ميكانيكياً وتقليل الهوامش البيضاء الخارجية */
 .page{
   width: 210mm;
   height: 297mm;
@@ -61,7 +61,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 .objective label,.note label{display:block;font-size:5.8pt;color:#0369a1;font-weight:bold;margin-bottom:0}
 .objective textarea{height:13px;resize:vertical}
 
-/* توزيع جدول التقييم بامتوازٍ تام ومساحة واسعة */
+/* إدارة المساحات العمودية لجدول التقويم (20 عنصراً) */
 .eval{margin-bottom:1.5px}
 .eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:1px;font-size:5.5pt}
 .eval td{border:1px solid var(--border);padding:0.2px;font-size:5.5pt;text-align:center;height:18px}
@@ -113,7 +113,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
  .notes textarea,.objective textarea{font-size:11px}
 }
 
-/* إعدادات الطباعة الدقيقة على مقاس 210 × 297 مم لضمان صفحة واحدة فقط وبدون هوامش مهدورة */
+/* أوامر الطباعة الصارمة (@media print) لعدم كسر الصفحات وتفريغ لوحة التحكم */
 @page{
   size: 210mm 297mm;
   margin: 0mm;
