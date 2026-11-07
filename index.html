@@ -7,36 +7,37 @@
 <title>بطاقة تبادل الزيارات | مدرسة عبدالله بن مسعود</title>
 <style>
 :root{
-  --blue:#0284c7;--light-blue:#e0f2fe;--green:#176b45;--light-green:#dcfce7;
-  --text:#1e293b;--border:#cbd5e1;--muted:#64748b;--red:#b91c1c;
+  --blue:#0369a1;--light-blue:#f0f9ff;--green:#176b45;--light-green:#f0fdf4;
+  --text:#0f172a;--border:#94a3b8;--muted:#64748b;--red:#b91c1c;
 }
 *{box-sizing:border-box}
-html, body{margin:0;padding:0;background:#f1f5f9;color:var(--text);font-family:Tahoma,Arial,sans-serif}
+html, body{margin:0;padding:0;background:#e2e8f0;color:var(--text);font-family:Tahoma,Arial,sans-serif}
 button,input,select,textarea{font:inherit}
-.toolbar{max-width:210mm;margin:4px auto;background:#fff;padding:4px 8px;border-radius:6px;box-shadow:0 2px 6px #0000000d;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
-.toolbar-actions{display:flex;flex-wrap:wrap;gap:4px}
-.btn{border:0;border-radius:4px;padding:4px 8px;background:var(--green);color:#fff;font-size:11px;font-weight:bold;cursor:pointer}
-.btn.secondary{background:#e2e8f0;color:#0f172a}
+
+/* شريط التحكم العلوي للشاشة فقط */
+.toolbar{max-width:210mm;margin:6px auto;background:#fff;padding:6px 10px;border-radius:6px;box-shadow:0 2px 6px #00000010;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.toolbar-actions{display:flex;flex-wrap:wrap;gap:5px}
+.btn{border:0;border-radius:4px;padding:5px 10px;background:var(--green);color:#fff;font-size:12px;font-weight:bold;cursor:pointer}
+.btn.secondary{background:#cbd5e1;color:#1e293b}
 .btn.danger{background:#b91c1c}
-.btn.blue{background:#0369a1}
-.status{font-size:10px;color:#166534;min-height:14px}
-.stats{display:flex;flex-wrap:wrap;gap:5px}
-.stat{background:#f8fafc;border:1px solid var(--border);border-radius:4px;padding:2px 5px;font-size:10px;font-weight:bold}
-.saved-panel{max-width:210mm;margin:0 auto 4px;background:white;padding:6px;border:1px solid var(--border);border-radius:6px;display:none}
+.btn.blue{background:var(--blue)}
+.status{font-size:11px;color:#166534;font-weight:bold}
+.stats{display:flex;flex-wrap:wrap;gap:6px}
+.stat{background:#f8fafc;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:11px;font-weight:bold}
+.saved-panel{max-width:210mm;margin:0 auto 6px;background:white;padding:8px;border:1px solid var(--border);border-radius:6px;display:none}
 .saved-panel.open{display:block}
-.saved-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:3px 0;border-bottom:1px solid #e2e8f0}
-.saved-row:last-child{border-bottom:0}
+.saved-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:4px 0;border-bottom:1px solid #e2e8f0}
 .saved-row strong{flex:1;min-width:140px}
 
-/* تثبيت مقاس ورقة A4 ميكانيكياً وضمان احتوائها في صفحة واحدة */
+/* إطار ورقة A4 مصمم هندسياً ليملأ الصفحة تماماً ويطبع في صفحة واحدة قطعية */
 .page{
   width: 210mm;
   height: 297mm;
   max-height: 297mm;
   margin: 0 auto;
   background: white;
-  padding: 1.5mm 3mm;
-  box-shadow: 0 2px 16px #00000012;
+  padding: 4mm 5mm;
+  box-shadow: 0 4px 20px #0000001a;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -44,76 +45,70 @@ button,input,select,textarea{font:inherit}
   overflow: hidden;
 }
 
-.header{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:1px 3px;margin-bottom:1px;border:1px solid #bae6fd;border-radius:3px;background:linear-gradient(135deg,#e0f2fe,#dcfce7)}
-.school-info{font-size:4.8pt;font-weight:bold;line-height:1.05;min-width:27%}
+/* الترويسة */
+.header{display:flex;justify-content:space-between;align-items:center;padding:3px 6px;margin-bottom:2px;border:1px solid #bae6fd;border-radius:4px;background:linear-gradient(135deg,var(--light-blue),var(--light-green))}
+.school-info{font-size:6pt;font-weight:bold;line-height:1.15;min-width:30%}
 .school-info.left{text-align:left}
 .header-title{text-align:center;flex:1}
-.header-title h1{font-size:9.5pt;color:#0369a1;margin:0 0 1px}
-.header-title p{font-size:5pt;color:#0f766e;font-weight:bold;margin:0}
-.date-input{max-width:85px}
+.header-title h1{font-size:11.5pt;color:var(--blue);margin:0 0 2px;font-weight:bold}
+.header-title p{font-size:6.2pt;color:var(--green);font-weight:bold;margin:0}
+.date-input{max-width:95px}
+
+/* جدول معلومات الزيارة */
 table{width:100%;border-collapse:collapse;table-layout:fixed}
-.meta{margin-bottom:1px}
-.meta th,.meta td{border:1px solid var(--border);padding:0.5px 1.5px;font-size:5pt;text-align:right;overflow-wrap:anywhere}
-.meta th{background:var(--light-blue);color:#0369a1;width:12%;font-weight:bold}
-.meta td{width:21%}
-input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:2px;padding:0.5px 1.5px;background:white;color:var(--text);font-size:5pt}
-.objective{border:1px solid var(--border);background:#fafafa;border-radius:2px;padding:1px 2px;margin-bottom:1px}
-.objective label,.note label{display:block;font-size:5pt;color:#0369a1;font-weight:bold;margin-bottom:0}
-.objective textarea{height:11px;resize:none}
+.meta{margin-bottom:2px}
+.meta th,.meta td{border:1px solid var(--border);padding:1px 3px;font-size:6.2pt;text-align:right}
+.meta th{background:var(--light-blue);color:var(--blue);width:13%;font-weight:bold}
+.meta td{width:20.3%}
+input.control,select.control,textarea.control,.notes textarea,.objective textarea,.remarks{width:100%;min-width:0;border:1px solid var(--border);border-radius:2px;padding:1px 3px;background:white;color:var(--text);font-size:6.2pt}
 
-/* مضاعفة ضغط صفوف جدول التقييم لضمان الاحتواء التام */
-.eval{margin-bottom:1px}
-.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:0.5px;font-size:4.8pt}
-.eval td{border:1px solid var(--border);padding:0px;font-size:4.8pt;text-align:center;height:14.5px}
-.eval td.item{text-align:right;font-weight:600;line-height:1;padding-right:2px}
-.eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:35%}
+/* الهدف من الزيارة */
+.objective{border:1px solid var(--border);background:#fafafa;border-radius:3px;padding:2px 4px;margin-bottom:2px}
+.objective label,.note label{display:block;font-size:6.2pt;color:var(--blue);font-weight:bold;margin-bottom:1px}
+.objective textarea{height:14px;resize:none}
+
+/* جدول التقويم (20 عنصراً بتصميم مدمج ومرتب) */
+.eval{margin-bottom:2px}
+.eval th{background:var(--green);color:#fff;border:1px solid #0f5132;padding:1px;font-size:5.8pt;font-weight:bold}
+.eval td{border:1px solid var(--border);padding:0;font-size:5.8pt;text-align:center;height:15.5px}
+.eval td.item{text-align:right;font-weight:600;padding-right:3px;line-height:1.1}
+.eval th:nth-child(1){width:4%}.eval th:nth-child(2){width:34%}
 .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8.5%}
-.eval th:nth-child(7){width:27%}
-.rate{display:block;position:relative;z-index:1;pointer-events:auto;touch-action:manipulation;width:100%;min-width:0;height:13.5px;border:1px solid #cbd5e1;background:#fff;color:#b91c1c;font-weight:bold;cursor:pointer;border-radius:2px;font-size:7.5pt;line-height:1;text-align:center;padding:0}
-.rate.chosen{background:#dcfce7;color:#166534;border:1px solid #15803d}
-.rate.zero{background:#fee2e2;color:#991b1b;border:1px solid #b91c1c}
-.remarks{font-size:4.8pt;padding:0.2px;height:13.5px}
+.eval th:nth-child(7){width:28%}
+.rate{display:block;width:100%;height:14.5px;border:1px solid var(--border);background:#fff;color:var(--red);font-weight:bold;cursor:pointer;border-radius:2px;font-size:8pt;line-height:1;text-align:center;padding:0}
+.rate.chosen{background:var(--light-green);color:var(--green);border:1px solid var(--green)}
+.remarks{font-size:5.8pt;padding:0.2px;height:14.5px;border:0}
 
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:1px}
-.note{border:1px solid var(--border);border-radius:2px;padding:1px 2px}
-.note textarea{height:12px;resize:none;border:0;padding:0.2px;font-size:5pt}
+/* الملاحظات والتوصيات */
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:2px}
+.note{border:1px solid var(--border);border-radius:3px;padding:2px 4px}
+.note textarea{height:16px;resize:none;border:0;padding:0;font-size:6.2pt}
 
-.signatures{margin-top:0.5px}
-.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:0.5px;vertical-align:top}
-.sig-title{font-size:5pt;color:#0369a1;font-weight:bold;margin-bottom:0}
-.sig-select{width:100%;font-size:5pt;border:1px solid var(--border);border-radius:2px;padding:0.2px;background:white}
-.sig-name{font-size:5.5pt;font-weight:bold;padding:0.1px}
-.sig-space{font-size:4.2pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:0.3px;padding-top:0.1px}
-.footer{text-align:center;border-top:1px solid #16a34a;margin-top:0.3px;padding-top:0.1px;font-size:4.5pt;font-weight:bold;color:#475569}
-.small-help{max-width:210mm;margin:4px auto;color:#475569;font-size:10px;line-height:1.4}
+/* التوقيعات */
+.signatures{margin-top:1px}
+.signatures td{width:33.33%;border:1px solid var(--border);background:#f8fafc;text-align:center;padding:2px;vertical-align:top}
+.sig-title{font-size:6.2pt;color:var(--blue);font-weight:bold;margin-bottom:1px}
+.sig-select{width:100%;font-size:6.2pt;border:1px solid var(--border);border-radius:2px;padding:1px;background:white}
+.sig-name{font-size:6.8pt;font-weight:bold;padding:1px}
+.sig-space{font-size:5.2pt;color:var(--muted);border-top:1px dashed var(--border);margin-top:2px;padding-top:1px}
+.footer{text-align:center;border-top:1px solid var(--green);margin-top:2px;padding-top:1px;font-size:5.2pt;font-weight:bold;color:var(--muted)}
+.small-help{max-width:210mm;margin:6px auto;color:var(--muted);font-size:11px;line-height:1.4}
 
+/* تجاوب الشاشات الصغيرة */
 @media(max-width:700px){
- body{padding:4px}
- .toolbar{padding:6px}
+ body{padding:6px}
+ .toolbar{padding:8px}
  .toolbar-actions{width:100%}
  .btn{flex:1}
  .stats{width:100%}
  .stat{flex:1;text-align:center}
- .page{width:100%;height:auto;padding:5px;box-shadow:none}
- .header{gap:4px;padding:4px}
- .school-info{font-size:7px;min-width:26%}
- .header-title h1{font-size:11px}
- .header-title p{font-size:7px}
- .meta th,.meta td{font-size:9px;padding:2px}
- .control,.sig-select{font-size:10px!important}
- .eval{width:100%;min-width:0;table-layout:fixed}
- .eval th,.eval td{font-size:7.5px;padding:1px;overflow-wrap:anywhere}
- .eval td.item{min-width:0;font-size:7.5px;line-height:1.15}
- .eval th:nth-child(1){width:5%}.eval th:nth-child(2){width:34%}
- .eval th:nth-child(3),.eval th:nth-child(4),.eval th:nth-child(5),.eval th:nth-child(6){width:8%}
- .eval th:nth-child(7){width:21%}
- .rate{height:25px;font-size:13px;padding:0}
- .remarks{font-size:7.5px!important;height:24px}
+ .page{width:100%;height:auto;padding:8px;box-shadow:none}
+ .eval th,.eval td{font-size:8px;height:24px}
+ .rate{height:22px;font-size:12px}
  .notes{grid-template-columns:1fr}
- .notes textarea,.objective textarea{font-size:11px}
 }
 
-/* إعدادات الطباعة الصارمة جداً لمنع الدفع للصفحة الثانية */
+/* إعدادات الطباعة الحصرية لملء صفحة A4 بدون أي ترحيل */
 @page{
   size: 210mm 297mm;
   margin: 0mm;
@@ -126,7 +121,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
    height: 297mm !important;
    max-height: 297mm !important;
    margin: 0 !important;
-   padding: 1mm 2.5mm !important;
+   padding: 4mm 5mm !important;
    box-shadow: none !important;
    border-radius: 0 !important;
    overflow: hidden !important;
@@ -135,43 +130,44 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
    flex-direction: column !important;
    justify-content: space-between !important;
  }
- .header{padding:0.5px 2px;margin-bottom:0.5px;gap:2px}
- .header-title h1{font-size:9pt;margin-bottom:0}
- .header-title p{font-size:4.8pt}
- .school-info{font-size:4.5pt;line-height:1}
- .meta{margin-bottom:0.5px}
- .meta th,.meta td{font-size:4.8pt;padding:0.1px 1px;line-height:1}
- input,select,textarea{color:#111!important;background:transparent!important;box-shadow:none!important}
+ .header{padding:2px 4px;margin-bottom:1.5px}
+ .header-title h1{font-size:11pt;margin-bottom:1px}
+ .header-title p{font-size:5.8pt}
+ .school-info{font-size:5.5pt;line-height:1.1}
+ .meta{margin-bottom:1.5px}
+ .meta th,.meta td{font-size:5.8pt;padding:0.5px 2px}
+ input,select,textarea{color:#000!important;background:transparent!important;box-shadow:none!important}
  input.control,select.control,.sig-select,.objective textarea,.note textarea,.remarks{border:0!important;border-radius:0!important;padding:0!important;appearance:none;-webkit-appearance:none}
- .objective{padding:0.5px 1px;margin-bottom:0.5px}
- .objective label,.note label{font-size:4.8pt;margin-bottom:0}
- .objective textarea{height:9px;resize:none;font-size:4.8pt}
- .eval{margin-bottom:0.5px}
- .eval th{font-size:4.5pt;padding:0.3px 0.1px;line-height:1}
- .eval td{font-size:4.5pt;height:14px;padding:0px;line-height:1}
- .rate{height:13px;font-size:7pt;padding:0;border:0!important;background:transparent!important}
- .remarks{height:13px;font-size:4.5pt}
- .notes{gap:1px;margin-bottom:0.5px}
- .note{padding:0.5px 1px}
- .note textarea{height:10px;font-size:4.8pt;resize:none}
- .signatures{margin-top:0.2px}
- .signatures td{padding:0.5px}
- .sig-title{font-size:4.8pt;margin-bottom:0}
- .sig-select{font-size:4.8pt}
- .sig-name{font-size:5.2pt;padding:0.1px}
- .sig-space{font-size:4pt;margin-top:0.2px;padding-top:0.1px}
- .footer{font-size:4.2pt;margin-top:0.2px;padding-top:0.1px}
+ .objective{padding:1px 3px;margin-bottom:1.5px}
+ .objective label,.note label{font-size:5.8pt;margin-bottom:0}
+ .objective textarea{height:12px;font-size:5.8pt}
+ .eval{margin-bottom:1.5px}
+ .eval th{font-size:5.2pt;padding:0.4px 0.2px}
+ .eval td{font-size:5.2pt;height:14.5px;padding:0}
+ .rate{height:13.5px;font-size:7.5pt;border:0!important;background:transparent!important}
+ .remarks{height:13.5px;font-size:5.2pt}
+ .notes{gap:2px;margin-bottom:1.5px}
+ .note{padding:1px 3px}
+ .note textarea{height:14px;font-size:5.8pt}
+ .signatures{margin-top:0.5px}
+ .signatures td{padding:1.5px}
+ .sig-title{font-size:5.8pt;margin-bottom:0}
+ .sig-select{font-size:5.8pt}
+ .sig-name{font-size:6.2pt;padding:0.2px}
+ .sig-space{font-size:4.8pt;margin-top:1px;padding-top:0.5px}
+ .footer{font-size:4.8pt;margin-top:1px;padding-top:0.5px}
  tr,td,th,.header,.objective,.notes,.signatures{break-inside:avoid;page-break-inside:avoid}
 }
 </style>
 </head>
 <body>
+
 <div class="toolbar">
   <div class="toolbar-actions">
     <button class="btn" type="button" onclick="saveRecord()">💾 حفظ البطاقة</button>
-    <button class="btn blue" type="button" onclick="toggleSaved()">📂 البطاقات المحفوظة</button>
+    <button class="btn blue" type="button" onclick="toggleSaved()">📂 المحفوظات</button>
     <button class="btn" type="button" onclick="printCard()">🖨️ طباعة / PDF</button>
-    <button class="btn secondary" type="button" onclick="newCard()">＋ بطاقة جديدة</button>
+    <button class="btn secondary" type="button" onclick="newCard()">＋ جديدة</button>
     <button class="btn danger" type="button" onclick="resetForm()">إعادة ضبط</button>
   </div>
   <div class="stats">
@@ -180,12 +176,11 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
     <div class="stat">النسبة: <span id="total-percent">--</span></div>
     <div class="stat">التقدير: <span id="total-grade">غير مكتمل</span></div>
   </div>
-  <div id="status" class="status" role="status" aria-live="polite">الحفظ التلقائي مفعّل على هذا الجهاز بعد أي تعديل.</div>
+  <div id="status" class="status" role="status" aria-live="polite">الحفظ التلقائي مفعّل.</div>
 </div>
 
 <div id="saved-panel" class="saved-panel">
   <strong>البطاقات المحفوظة على هذا الجهاز</strong>
-  <p style="font-size:10px;color:#64748b">الحفظ محلي في هذا المتصفح ولا ينتقل تلقائيًا إلى جهاز آخر. اطبع البطاقة أو احتفظ بنسخة احتياطية عند الحاجة.</p>
   <div id="saved-list"></div>
 </div>
 
@@ -202,8 +197,8 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 
     <table class="meta">
       <tr>
-        <th>المعلم الزائر</th><td><select id="visitor-select" class="control" data-autosave><option value="">-- اختر المعلم --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select></td>
-        <th>المعلم المزار</th><td><select id="visited-select" class="control" data-autosave><option value="">-- اختر المعلم --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select></td>
+        <th>المعلم الزائر</th><td><select id="visitor-select" class="control" data-autosave><option value="">-- اختر المعلم --</option></select></td>
+        <th>المعلم المزار</th><td><select id="visited-select" class="control" data-autosave><option value="">-- اختر المعلم --</option></select></td>
         <th>الصف والفصل</th><td><select id="class-select" class="control" data-autosave>
           <option value="">-- اختر الفصل --</option><option>ثاني 1</option><option>ثالث 1</option><option>ثالث 2</option><option>رابع 1</option><option>رابع 2</option><option>خامس 1</option><option>خامس 2</option><option>سادس 1</option><option>سادس 2</option>
         </select></td>
@@ -220,28 +215,7 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 
     <table class="eval">
       <thead><tr><th>م</th><th>المجال / عناصر التقويم</th><th>ممتاز (3)</th><th>جيد جدًا (2)</th><th>جيد (1)</th><th>لم ينفذ (0)</th><th>ملحوظات</th></tr></thead>
-      <tbody id="eval-rows">
-<tr><td>1</td><td class="item">وضوح أهداف الدرس</td><td><select class="rate" data-score="3" data-index="0" aria-label="وضوح أهداف الدرس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="0" aria-label="وضوح أهداف الدرس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="0" aria-label="وضوح أهداف الدرس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="0" aria-label="وضوح أهداف الدرس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="0" aria-label="ملحوظات وضوح أهداف الدرس"></td></tr>
-<tr><td>2</td><td class="item">تسلسل خطوات الدرس</td><td><select class="rate" data-score="3" data-index="1" aria-label="تسلسل خطوات الدرس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="1" aria-label="تسلسل خطوات الدرس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="1" aria-label="تسلسل خطوات الدرس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="1" aria-label="تسلسل خطوات الدرس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="1" aria-label="ملحوظات تسلسل خطوات الدرس"></td></tr>
-<tr><td>3</td><td class="item">وضوح وفصاحة الصوت</td><td><select class="rate" data-score="3" data-index="2" aria-label="وضوح وفصاحة الصوت، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="2" aria-label="وضوح وفصاحة الصوت، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="2" aria-label="وضوح وفصاحة الصوت، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="2" aria-label="وضوح وفصاحة الصوت، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="2" aria-label="ملحوظات وضوح وفصاحة الصوت"></td></tr>
-<tr><td>4</td><td class="item">مناسبة طريقة التدريس</td><td><select class="rate" data-score="3" data-index="3" aria-label="مناسبة طريقة التدريس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="3" aria-label="مناسبة طريقة التدريس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="3" aria-label="مناسبة طريقة التدريس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="3" aria-label="مناسبة طريقة التدريس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="3" aria-label="ملحوظات مناسبة طريقة التدريس"></td></tr>
-<tr><td>5</td><td class="item">جودة الأسئلة التي تلقى على الطلاب</td><td><select class="rate" data-score="3" data-index="4" aria-label="جودة الأسئلة التي تلقى على الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="4" aria-label="جودة الأسئلة التي تلقى على الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="4" aria-label="جودة الأسئلة التي تلقى على الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="4" aria-label="جودة الأسئلة التي تلقى على الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="4" aria-label="ملحوظات جودة الأسئلة التي تلقى على الطلاب"></td></tr>
-<tr><td>6</td><td class="item">مهارة توزيع الأسئلة على الطلاب</td><td><select class="rate" data-score="3" data-index="5" aria-label="مهارة توزيع الأسئلة على الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="5" aria-label="مهارة توزيع الأسئلة على الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="5" aria-label="مهارة توزيع الأسئلة على الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="5" aria-label="مهارة توزيع الأسئلة على الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="5" aria-label="ملحوظات مهارة توزيع الأسئلة على الطلاب"></td></tr>
-<tr><td>7</td><td class="item">تقبل المعلم لمشاركات وآراء الطلاب</td><td><select class="rate" data-score="3" data-index="6" aria-label="تقبل المعلم لمشاركات وآراء الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="6" aria-label="تقبل المعلم لمشاركات وآراء الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="6" aria-label="تقبل المعلم لمشاركات وآراء الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="6" aria-label="تقبل المعلم لمشاركات وآراء الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="6" aria-label="ملحوظات تقبل المعلم لمشاركات وآراء الطلاب"></td></tr>
-<tr><td>8</td><td class="item">جلب انتباه الطلاب</td><td><select class="rate" data-score="3" data-index="7" aria-label="جلب انتباه الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="7" aria-label="جلب انتباه الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="7" aria-label="جلب انتباه الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="7" aria-label="جلب انتباه الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="7" aria-label="ملحوظات جلب انتباه الطلاب"></td></tr>
-<tr><td>9</td><td class="item">استخدام عبارات التشجيع والتعزيز للطلاب</td><td><select class="rate" data-score="3" data-index="8" aria-label="استخدام عبارات التشجيع والتعزيز للطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="8" aria-label="استخدام عبارات التشجيع والتعزيز للطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="8" aria-label="استخدام عبارات التشجيع والتعزيز للطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="8" aria-label="استخدام عبارات التشجيع والتعزيز للطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="8" aria-label="ملحوظات استخدام عبارات التشجيع والتعزيز للطلاب"></td></tr>
-<tr><td>10</td><td class="item">تمكن المعلم من المادة العلمية</td><td><select class="rate" data-score="3" data-index="9" aria-label="تمكن المعلم من المادة العلمية، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="9" aria-label="تمكن المعلم من المادة العلمية، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="9" aria-label="تمكن المعلم من المادة العلمية، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="9" aria-label="تمكن المعلم من المادة العلمية، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="9" aria-label="ملحوظات تمكن المعلم من المادة العلمية"></td></tr>
-<tr><td>11</td><td class="item">استثمار وقت الحصة</td><td><select class="rate" data-score="3" data-index="10" aria-label="استثمار وقت الحصة، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="10" aria-label="استثمار وقت الحصة، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="10" aria-label="استثمار وقت الحصة، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="10" aria-label="استثمار وقت الحصة، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="10" aria-label="ملحوظات استثمار وقت الحصة"></td></tr>
-<tr><td>12</td><td class="item">شخصية المعلم</td><td><select class="rate" data-score="3" data-index="11" aria-label="شخصية المعلم، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="11" aria-label="شخصية المعلم، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="11" aria-label="شخصية المعلم، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="11" aria-label="شخصية المعلم، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="11" aria-label="ملحوظات شخصية المعلم"></td></tr>
-<tr><td>13</td><td class="item">مظهر المعلم</td><td><select class="rate" data-score="3" data-index="12" aria-label="مظهر المعلم، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="12" aria-label="مظهر المعلم، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="12" aria-label="مظهر المعلم، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="12" aria-label="مظهر المعلم، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="12" aria-label="ملحوظات مظهر المعلم"></td></tr>
-<tr><td>14</td><td class="item">ضبط الطلاب</td><td><select class="rate" data-score="3" data-index="13" aria-label="ضبط الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="13" aria-label="ضبط الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="13" aria-label="ضبط الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="13" aria-label="ضبط الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="13" aria-label="ملحوظات ضبط الطلاب"></td></tr>
-<tr><td>15</td><td class="item">عرض وسيلة تعليمية</td><td><select class="rate" data-score="3" data-index="14" aria-label="عرض وسيلة تعليمية، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="14" aria-label="عرض وسيلة تعليمية، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="14" aria-label="عرض وسيلة تعليمية، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="14" aria-label="عرض وسيلة تعليمية، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="14" aria-label="ملحوظات عرض وسيلة تعليمية"></td></tr>
-<tr><td>16</td><td class="item">تنفيذ نشاطات المادة</td><td><select class="rate" data-score="3" data-index="15" aria-label="تنفيذ نشاطات المادة، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="15" aria-label="تنفيذ نشاطات المادة، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="15" aria-label="تنفيذ نشاطات المادة، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="15" aria-label="تنفيذ نشاطات المادة، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="15" aria-label="ملحوظات تنفيذ نشاطات المادة"></td></tr>
-<tr><td>17</td><td class="item">إتاحة الفرصة للنقد والتذوق</td><td><select class="rate" data-score="3" data-index="16" aria-label="إتاحة الفرصة للنقد والتذوق، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="16" aria-label="إتاحة الفرصة للنقد والتذوق، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="16" aria-label="إتاحة الفرصة للنقد والتذوق، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="16" aria-label="إتاحة الفرصة للنقد والتذوق، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="16" aria-label="ملحوظات إتاحة الفرصة للنقد والتذوق"></td></tr>
-<tr><td>18</td><td class="item">توظيف المكتبة لخدمة الدرس</td><td><select class="rate" data-score="3" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="17" aria-label="توظيف المكتبة لخدمة الدرس، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="17" aria-label="ملحوظات توظيف المكتبة لخدمة الدرس"></td></tr>
-<tr><td>19</td><td class="item">تقييم الدرس في نهاية الحصة</td><td><select class="rate" data-score="3" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="18" aria-label="تقييم الدرس في نهاية الحصة، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="18" aria-label="ملحوظات تقييم الدرس في نهاية الحصة"></td></tr>
-<tr><td>20</td><td class="item">الاحتفاظ بالنتائج المميزة من أعمال الطلاب</td><td><select class="rate" data-score="3" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، ممتاز" title="اختر علامة صح"><option value=""></option><option value="3">✔️</option></select></td><td><select class="rate" data-score="2" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، جيد جداً" title="اختر علامة صح"><option value=""></option><option value="2">✔️</option></select></td><td><select class="rate" data-score="1" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، جيد" title="اختر علامة صح"><option value=""></option><option value="1">✔️</option></select></td><td><select class="rate" data-score="0" data-index="19" aria-label="الاحتفاظ بالنتائج المميزة من أعمال الطلاب، لم ينفذ" title="اختر علامة صح"><option value=""></option><option value="0">✔️</option></select></td><td><input type="text" class="remarks" data-remark="19" aria-label="ملحوظات الاحتفاظ بالنتائج المميزة من أعمال الطلاب"></td></tr>
-      </tbody>
+      <tbody id="eval-rows"></tbody>
     </table>
 
     <div class="notes">
@@ -252,52 +226,26 @@ input.control,select.control,textarea.control,.notes textarea,.objective textare
 
   <div class="signatures">
     <table><tr>
-      <td><div class="sig-title">المعلم الزائر</div><select id="visitor-sig-select" class="sig-select" aria-label="توقيع المعلم الزائر"><option value="">-- اختر المعلم الزائر --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select><div class="sig-space">التوقيع: ....................</div></td>
-      <td><div class="sig-title">المعلم المزار</div><select id="visited-sig-select" class="sig-select" aria-label="توقيع المعلم المزار"><option value="">-- اختر المعلم المزار --</option><option value="مريزيق جطيل الرويلي">مريزيق جطيل الرويلي</option><option value="خالد فرحان الرويلي">خالد فرحان الرويلي</option><option value="خالد مناحي الرويلي">خالد مناحي الرويلي</option><option value="راضي هليل الرويلي">راضي هليل الرويلي</option><option value="فرحان الخلاوي الرويلي">فرحان الخلاوي الرويلي</option><option value="مرضي جبر الرويلي">مرضي جبر الرويلي</option><option value="نايف وراد الرويلي">نايف وراد الرويلي</option><option value="عطالله فاضل الرويلي">عطالله فاضل الرويلي</option><option value="مشور فدعوس الرويلي">مشور فدعوس الرويلي</option><option value="فايز عقيل الرويلي">فايز عقيل الرويلي</option><option value="نواف وراد الرويلي">نواف وراد الرويلي</option><option value="نواف عبدالله الرويلي">نواف عبدالله الرويلي</option><option value="خالد هزاع الرويلي">خالد هزاع الرويلي</option><option value="حمود باقي الرويلي">حمود باقي الرويلي</option><option value="احمد ختام الرويلي">احمد ختام الرويلي</option><option value="رائد خليف الرويلي">رائد خليف الرويلي</option><option value="مناحي هزاع الرويلي">مناحي هزاع الرويلي</option><option value="سلمان صالح الشبيلي">سلمان صالح الشبيلي</option><option value="عبدالله حلسه الرويلي">عبدالله حلسه الرويلي</option><option value="مشل خليف الرويلي">مشل خليف الرويلي</option><option value="ناصر جويفان الرويلي">ناصر جويفان الرويلي</option><option value="مفرح مدشر الرويلي">مفرح مدشر الرويلي</option><option value="خالد لهد الرويلي">خالد لهد الرويلي</option><option value="مشاري عبدالله الرويلي">مشاري عبدالله الرويلي</option><option value="جايز معاشي الرويلي">جايز معاشي الرويلي</option><option value="محمد محارب الرويلي">محمد محارب الرويلي</option><option value="سعود غازي الرويلي">سعود غازي الرويلي</option><option value="مشاري عبدالرحمن النصيري">مشاري عبدالرحمن النصيري</option><option value="محمد عبدالعزيز الغريري">محمد عبدالعزيز الغريري</option><option value="مناور ذيبان الرويلي">مناور ذيبان الرويلي</option><option value="فريد طارف الدغمان">فريد طارف الدغمان</option><option value="وليد عبدالله المعيقل">وليد عبدالله المعيقل</option></select><div class="sig-space">التوقيع: ....................</div></td>
+      <td><div class="sig-title">المعلم الزائر</div><select id="visitor-sig-select" class="sig-select" aria-label="توقيع المعلم الزائر"><option value="">-- اختر المعلم الزائر --</option></select><div class="sig-space">التوقيع: ....................</div></td>
+      <td><div class="sig-title">المعلم المزار</div><select id="visited-sig-select" class="sig-select" aria-label="توقيع المعلم المزار"><option value="">-- اختر المعلم المزار --</option></select><div class="sig-space">التوقيع: ....................</div></td>
       <td><div class="sig-title">مدير المدرسة</div><div class="sig-name">عويد عشبان الرويلي</div><div class="sig-space">التوقيع: ....................</div></td>
     </tr></table>
     <div class="footer">إعداد وتصميم مساعد إداري: خالد شاقي الرويلي</div>
   </div>
 </div>
-<div class="small-help">التقييم: اضغط على خانة الدرجة المناسبة لتتحول إلى ✔️، ويمكن اختيار درجة واحدة فقط لكل مجال. ملاحظة: تحفظ البطاقات على الجهاز والمتصفح الحاليين.</div>
+<div class="small-help">التقييم: اضغط على خانة الدرجة لتتحول إلى ✔️ (درجة واحدة لكل مجال). الحفظ محلي وتلقائي على جهازك.</div>
 
 <script>
 const teacherNames = [
-"مريزيق جطيل الرويلي",
-"خالد فرحان الرويلي",
-"خالد مناحي الرويلي",
-"راضي هليل الرويلي",
-"فرحان الخلاوي الرويلي",
-"مرضي جبر الرويلي",
-"نايف وراد الرويلي",
-"عطالله فاضل الرويلي",
-"مشور فدعوس الرويلي",
-"فايز عقيل الرويلي",
-"نواف وراد الرويلي",
-"نواف عبدالله الرويلي",
-"خالد هزاع الرويلي",
-"حمود باقي الرويلي",
-"احمد ختام الرويلي",
-"رائد خليف الرويلي",
-"مناحي هزاع الرويلي",
-"سلمان صالح الشبيلي",
-"عبدالله حلسه الرويلي",
-"مشل خليف الرويلي",
-"ناصر جويفان الرويلي",
-"مفرح مدشر الرويلي",
-"خالد لهد الرويلي",
-"مشاري عبدالله الرويلي",
-"جايز معاشي الرويلي",
-"محمد محارب الرويلي",
-"سعود غازي الرويلي",
-"مشاري عبدالرحمن النصيري",
-"محمد عبدالعزيز الغريري",
-"مناور ذيبان الرويلي",
-"فريد طارف الدغمان",
-"وليد عبدالله المعيقل"
+"مريزيق جطيل الرويلي", "خالد فرحان الرويلي", "خالد مناحي الرويلي", "راضي هليل الرويلي",
+"فرحان الخلاوي الرويلي", "مرضي جبر الرويلي", "نايف وراد الرويلي", "عطالله فاضل الرويلي",
+"مشور فدعوس الرويلي", "فايز عقيل الرويلي", "نواف وراد الرويلي", "نواف عبدالله الرويلي",
+"خالد هزاع الرويلي", "حمود باقي الرويلي", "احمد ختام الرويلي", "رائد خليف الرويلي",
+"مناحي هزاع الرويلي", "سلمان صالح الشبيلي", "عبدالله حلسه الرويلي", "مشل خليف الرويلي",
+"ناصر جويفان الرويلي", "مفرح مدشر الرويلي", "خالد لهد الرويلي", "مشاري عبدالله الرويلي",
+"جايز معاشي الرويلي", "محمد محارب الرويلي", "سعود غازي الرويلي", "مشاري عبدالرحمن النصيري",
+"محمد عبدالعزيز الغريري", "مناور ذيبان الرويلي", "فريد طارف الدغمان", "وليد عبدالله المعيقل"
 ];
-const visitorNames = teacherNames;
-const visitedNames = teacherNames;
 const evalItems = [
 "وضوح أهداف الدرس","تسلسل خطوات الدرس","وضوح وفصاحة الصوت","مناسبة طريقة التدريس",
 "جودة الأسئلة التي تلقى على الطلاب","مهارة توزيع الأسئلة على الطلاب",
@@ -308,52 +256,68 @@ const evalItems = [
 "توظيف المكتبة لخدمة الدرس","تقييم الدرس في نهاية الحصة",
 "الاحتفاظ بالنتائج المميزة من أعمال الطلاب"
 ];
-const STORAGE_KEY = "abdullah_bin_masoud_visit_cards_v2";
-const DRAFT_KEY = "abdullah_bin_masoud_visit_draft_v2";
+
+const STORAGE_KEY = "abdullah_bin_masoud_visit_cards_v3";
+const DRAFT_KEY = "abdullah_bin_masoud_visit_draft_v3";
 let scores = Array(20).fill(-1);
 let currentRecordId = null;
 let saveTimer = null;
 
-function populateSelect(id, names, placeholder) {
-  const select = document.getElementById(id);
-  select.innerHTML = "";
-  const first = document.createElement("option");
-  first.value = ""; first.textContent = placeholder;
-  select.appendChild(first);
-  names.forEach(name => {
-    const opt = document.createElement("option");
-    opt.value = name; opt.textContent = name; select.appendChild(opt);
+function populateSelects() {
+  ["visitor-select", "visited-select", "visitor-sig-select", "visited-sig-select"].forEach(id => {
+    const sel = document.getElementById(id);
+    if (!sel) return;
+    const firstOpt = sel.firstElementChild ? sel.firstElementChild.outerHTML : '<option value="">-- اختر المعلم --</option>';
+    sel.innerHTML = firstOpt;
+    teacherNames.forEach(name => {
+      const opt = document.createElement("option");
+      opt.value = name; opt.textContent = name;
+      sel.appendChild(opt);
+    });
   });
 }
-function initTable() {
+
+function buildTable() {
   const tbody = document.getElementById("eval-rows");
-  if (tbody && !tbody.dataset.ratingReady) {
-    tbody.dataset.ratingReady = "true";
-    tbody.addEventListener("change", function(event) {
-      const select = event.target.closest("select.rate");
-      if (!select || !tbody.contains(select)) return;
-      const idx = Number(select.dataset.index);
-      if (!Number.isInteger(idx) || idx < 0 || idx >= 20) return;
-      scores[idx] = select.value === "" ? -1 : Number(select.value);
-      updateRateRow(idx);
-      calculateTotal();
-      scheduleDraftSave();
-    });
-    tbody.addEventListener("input", function(event) {
-      if (event.target.matches("[data-remark]")) scheduleDraftSave();
-    });
-  }
+  tbody.innerHTML = "";
+  evalItems.forEach((item, idx) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${idx + 1}</td>
+      <td class="item">${item}</td>
+      <td><select class="rate" data-score="3" data-index="${idx}" title="ممتاز"><option value=""></option><option value="3">✔️</option></select></td>
+      <td><select class="rate" data-score="2" data-index="${idx}" title="جيد جداً"><option value=""></option><option value="2">✔️</option></select></td>
+      <td><select class="rate" data-score="1" data-index="${idx}" title="جيد"><option value=""></option><option value="1">✔️</option></select></td>
+      <td><select class="rate" data-score="0" data-index="${idx}" title="لم ينفذ"><option value=""></option><option value="0">✔️</option></select></td>
+      <td><input type="text" class="remarks" data-remark="${idx}" aria-label="ملحوظات"></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.addEventListener("change", function(e) {
+    const select = e.target.closest("select.rate");
+    if (!select) return;
+    const idx = Number(select.dataset.index);
+    scores[idx] = select.value === "" ? -1 : Number(select.value);
+    updateRateRow(idx);
+    calculateTotal();
+    scheduleDraftSave();
+  });
+  tbody.addEventListener("input", function(e) {
+    if (e.target.matches("[data-remark]")) scheduleDraftSave();
+  });
 }
+
 function updateRateRow(idx) {
   const row = document.querySelectorAll("#eval-rows tr")[idx];
   if (!row) return;
-  row.querySelectorAll("select.rate").forEach(select => {
-    const score = Number(select.dataset.score);
-    select.value = (scores[idx] === score) ? String(score) : "";
-    select.classList.toggle("chosen", scores[idx] === score);
-    select.classList.toggle("zero", false);
+  row.querySelectorAll("select.rate").forEach(sel => {
+    const score = Number(sel.dataset.score);
+    sel.value = (scores[idx] === score) ? String(score) : "";
+    sel.classList.toggle("chosen", scores[idx] === score);
   });
 }
+
 function calculateTotal() {
   const answered = scores.filter(s => s >= 0).length;
   const total = scores.reduce((sum, s) => sum + (s >= 0 ? s : 0), 0);
@@ -370,12 +334,14 @@ function calculateTotal() {
   percentEl.textContent = percent + "%";
   gradeEl.textContent = percent >= 90 ? "ممتاز" : percent >= 80 ? "جيد جدًا" : percent >= 70 ? "جيد" : "مرضي / يحتاج تحسين";
 }
+
 function syncPeople(source) {
   if (source === "visitor-select") document.getElementById("visitor-sig-select").value = document.getElementById("visitor-select").value;
   if (source === "visitor-sig-select") document.getElementById("visitor-select").value = document.getElementById("visitor-sig-select").value;
   if (source === "visited-select") document.getElementById("visited-sig-select").value = document.getElementById("visited-select").value;
   if (source === "visited-sig-select") document.getElementById("visited-select").value = document.getElementById("visited-sig-select").value;
 }
+
 function getFormData() {
   const fields = {};
   document.querySelectorAll("[data-autosave]").forEach(el => fields[el.id] = el.value);
@@ -386,6 +352,7 @@ function getFormData() {
   fields["scores"] = [...scores];
   return fields;
 }
+
 function applyFormData(data) {
   if (!data) return;
   document.querySelectorAll("[data-autosave]").forEach(el => {
@@ -399,125 +366,100 @@ function applyFormData(data) {
   scores.forEach((_, i) => updateRateRow(i));
   calculateTotal();
 }
+
 function readRecords() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }
-  catch (e) { return []; }
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); } catch(e) { return []; }
 }
 function writeRecords(records) {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(records)); return true; }
-  catch (e) { setStatus("تعذر الحفظ؛ قد تكون مساحة التخزين ممتلئة أو غير متاحة."); return false; }
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(records)); return true; } catch(e) { return false; }
 }
 function scheduleDraftSave() {
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
-    try { localStorage.setItem(DRAFT_KEY, JSON.stringify(getFormData())); setStatus("تم الحفظ التلقائي على هذا الجهاز."); }
-    catch(e) { setStatus("تعذر الحفظ التلقائي في هذا المتصفح."); }
+    try { localStorage.setItem(DRAFT_KEY, JSON.stringify(getFormData())); } catch(e) {}
   }, 300);
 }
 function saveRecord() {
   const data = getFormData();
   const records = readRecords();
-  const visitor = data["visitor-select"] || "زائر غير محدد";
-  const visited = data["visited-select"] || "معلم غير محدد";
-  const date = data["visit-date"] || "دون تاريخ";
-  if (!currentRecordId) currentRecordId = "visit-" + Date.now() + "-" + Math.random().toString(36).slice(2,7);
+  const visitor = data["visitor-select"] || "زائر";
+  const visited = data["visited-select"] || "مزار";
+  const date = data["visit-date"] || "تاريخ";
+  if (!currentRecordId) currentRecordId = "visit-" + Date.now();
   const index = records.findIndex(r => r.id === currentRecordId);
-  const record = {id:currentRecordId, title:`${date} | ${visitor} ← ${visited}`, updatedAt:new Date().toISOString(), data};
+  const record = {id:currentRecordId, title:`${date} | ${visitor} ← ${visited}`, data};
   if (index >= 0) records[index] = record; else records.unshift(record);
   if (writeRecords(records)) {
-    try { localStorage.setItem(DRAFT_KEY, JSON.stringify(data)); } catch(e) {}
-    setStatus("تم حفظ البطاقة في قائمة البطاقات المحفوظة.");
+    alert("تم حفظ البطاقة بنجاح!");
     renderSaved();
   }
 }
 function loadRecord(id) {
   const record = readRecords().find(r => r.id === id);
-  if (!record) { setStatus("لم يتم العثور على البطاقة."); return; }
+  if (!record) return;
   currentRecordId = record.id;
   applyFormData(record.data);
-  scheduleDraftSave();
-  setStatus("تم فتح البطاقة المحفوظة.");
   document.getElementById("saved-panel").classList.remove("open");
-  window.scrollTo({top:0,behavior:"smooth"});
 }
 function deleteRecord(id) {
-  if (!confirm("هل تريد حذف هذه البطاقة المحفوظة نهائيًا من هذا الجهاز؟")) return;
+  if (!confirm("حذف هذه البطاقة؟")) return;
   writeRecords(readRecords().filter(r => r.id !== id));
-  if (currentRecordId === id) currentRecordId = null;
   renderSaved();
-  setStatus("تم حذف البطاقة المحفوظة.");
 }
 function renderSaved() {
   const list = document.getElementById("saved-list");
   const records = readRecords();
   list.innerHTML = "";
-  if (!records.length) { list.textContent = "لا توجد بطاقات محفوظة بعد."; return; }
-  records.forEach(record => {
+  if (!records.length) { list.textContent = "لا توجد بطاقات محفوظة."; return; }
+  records.forEach(r => {
     const row = document.createElement("div"); row.className = "saved-row";
-    const title = document.createElement("strong"); title.textContent = record.title || "بطاقة دون عنوان";
-    const load = document.createElement("button"); load.className = "btn blue"; load.textContent = "فتح"; load.onclick = () => loadRecord(record.id);
-    const del = document.createElement("button"); del.className = "btn danger"; del.textContent = "حذف"; del.onclick = () => deleteRecord(record.id);
-    row.append(title,load,del); list.appendChild(row);
+    row.innerHTML = `<strong>${r.title}</strong> <button class="btn blue" onclick="loadRecord('${r.id}')">فتح</button> <button class="btn danger" onclick="deleteRecord('${r.id}')">حذف</button>`;
+    list.appendChild(row);
   });
 }
 function toggleSaved() {
-  const panel = document.getElementById("saved-panel");
-  panel.classList.toggle("open");
-  if (panel.classList.contains("open")) renderSaved();
+  const p = document.getElementById("saved-panel");
+  p.classList.toggle("open");
+  if (p.classList.contains("open")) renderSaved();
 }
-function setStatus(message) { document.getElementById("status").textContent = message; }
-function clearFields() {
+function newCard() {
+  if (!confirm("بدء بطاقة جديدة؟")) return;
+  currentRecordId = null;
   document.querySelectorAll("[data-autosave]").forEach(el => el.value = "");
   document.getElementById("visit-date").value = new Date().toISOString().slice(0,10);
   document.getElementById("visitor-sig-select").value = "";
   document.getElementById("visited-sig-select").value = "";
   document.querySelectorAll("[data-remark]").forEach(el => el.value = "");
   scores = Array(20).fill(-1);
-  scores.forEach((_,i) => updateRateRow(i));
+  scores.forEach((_, i) => updateRateRow(i));
   calculateTotal();
 }
-function newCard() {
-  if (!confirm("بدء بطاقة جديدة؟ تأكد من حفظ البطاقة الحالية أولًا إذا كنت تحتاجها.")) return;
-  currentRecordId = null;
-  clearFields();
-  scheduleDraftSave();
-  setStatus("بطاقة جديدة. استخدم زر حفظ البطاقة لحفظها في القائمة.");
-  window.scrollTo({top:0,behavior:"smooth"});
-}
 function resetForm() {
-  if (!confirm("سيتم مسح بيانات البطاقة الحالية من الشاشة. هل تريد المتابعة؟")) return;
+  if (!confirm("إعادة ضبط الشاشة؟")) return;
   currentRecordId = null;
-  clearFields();
-  try { localStorage.removeItem(DRAFT_KEY); } catch(e) {}
-  setStatus("تمت إعادة ضبط البطاقة الحالية. البطاقات المحفوظة سابقًا لم تُحذف.");
+  newCard();
 }
-function printCard() {
-  window.print();
-}
+function printCard() { window.print(); }
+
 function init() {
-  populateSelect("visitor-select", visitorNames, "-- اختر المعلم --");
-  populateSelect("visitor-sig-select", visitorNames, "-- اختر المعلم الزائر --");
-  populateSelect("visited-select", visitedNames, "-- اختر المعلم --");
-  populateSelect("visited-sig-select", visitedNames, "-- اختر المعلم المزار --");
-  initTable();
+  populateSelects();
+  buildTable();
   document.getElementById("visit-date").value = new Date().toISOString().slice(0,10);
-  document.getElementById("visitor-select").addEventListener("change", () => {syncPeople("visitor-select");scheduleDraftSave();});
-  document.getElementById("visitor-sig-select").addEventListener("change", () => {syncPeople("visitor-sig-select");scheduleDraftSave();});
-  document.getElementById("visited-select").addEventListener("change", () => {syncPeople("visited-select");scheduleDraftSave();});
-  document.getElementById("visited-sig-select").addEventListener("change", () => {syncPeople("visited-sig-select");scheduleDraftSave();});
+  document.getElementById("visitor-select").addEventListener("change", (e) => { syncPeople("visitor-select"); scheduleDraftSave(); });
+  document.getElementById("visitor-sig-select").addEventListener("change", (e) => { syncPeople("visitor-sig-select"); scheduleDraftSave(); });
+  document.getElementById("visited-select").addEventListener("change", (e) => { syncPeople("visited-select"); scheduleDraftSave(); });
+  document.getElementById("visited-sig-select").addEventListener("change", (e) => { syncPeople("visited-sig-select"); scheduleDraftSave(); });
   document.querySelectorAll("[data-autosave]").forEach(el => {
     el.addEventListener("input", scheduleDraftSave);
     el.addEventListener("change", scheduleDraftSave);
   });
   try {
     const draft = localStorage.getItem(DRAFT_KEY);
-    if (draft) {
-      applyFormData(JSON.parse(draft));
-      setStatus("تم استرجاع المسودة المحفوظة تلقائيًا من هذا الجهاز.");
-    }
-  } catch(e) { setStatus("تعذر استرجاع المسودة السابقة."); }
+    if (draft) applyFormData(JSON.parse(draft));
+  } catch(e) {}
   calculateTotal();
 }
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", init, {once:true});
 } else {
